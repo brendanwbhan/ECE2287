@@ -28,8 +28,8 @@ ENTITY hw_image_generator IS
 	GENERIC(
 		p_left	:	INTEGER := 0; --860
 		p_right	:	INTEGER := 0; --1060
-		p_topDigit		:	INTEGER := 320; --440
-		p_bottomDigit	:	INTEGER := 760); --640
+		p_topDigit		:	INTEGER := 340; --440
+		p_bottomDigit	:	INTEGER := 740); --640
 	PORT(
 		s0	:	IN STD_LOGIC;
 		s1	:	IN	STD_LOGIC;
@@ -49,46 +49,51 @@ BEGIN
 	BEGIN
 		IF(disp_ena = '1') THEN	--display time
 			-- Display Minutes
-			IF(row > 18 AND row < 305 AND column > p_topDigit AND column < p_bottomDigit) THEN --top dot
+			IF(row > 20 AND row < 260 AND column > p_topDigit AND column < p_bottomDigit) THEN --top dot
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			ELSIF(row > 323 AND row < 610 AND column > p_topDigit AND column < p_bottomDigit) THEN --top dot
+			ELSIF(row > 280 AND row < 520 AND column > p_topDigit AND column < p_bottomDigit) THEN --top dot
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
 				
 			-- Display two dots
-			ELSIF(row > 628 AND row < 646 AND column > 440 AND column < 458) THEN --top signal
+			ELSIF(row > 540 AND row < 560 AND column > 490 AND column < 510) THEN --top signal
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			ELSIF(row > 628 AND row < 646 AND column > 640 AND column < 658) THEN
+			ELSIF(row > 540 AND row < 560 AND column > 590 AND column < 610) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
+				
 			-- Display seconds
-			ELSIF(row > 664 AND row < 951 AND column > p_topDigit AND column < p_bottomDigit) THEN
+			ELSIF(row > 580 AND row < 820 AND column > p_topDigit AND column < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			ELSIF(row > 969 AND row < 1256 AND column > p_topDigit AND column < p_bottomDigit) THEN
+			ELSIF(row > 840 AND row < 1080 AND column > p_topDigit AND column < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
 			
 			-- Display dot
-			ELSIF(row > 1274 AND row < 1292 AND column > (p_bottomDigit - 18) AND column < p_bottomDigit) THEN
+			ELSIF(row > 1100 AND row < 1120 AND column > (p_bottomDigit - 20) AND column < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
 				
 			-- Display milliseconds
-			ELSIF(row > 1310 AND row < 1597 AND column > p_topDigit AND column < p_bottomDigit) THEN
+			ELSIF(row > 1140 AND row < 1380 AND column > p_topDigit AND column < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			ELSIF(row > 1615 AND row < 1902 AND column > p_topDigit AND column < p_bottomDigit) THEN
+			ELSIF(row > 1400 AND row < 1640 AND column > p_topDigit AND column < p_bottomDigit) THEN
+				red <= (OTHERS => '1');
+				green	<= (OTHERS => '1');
+				blue <= (OTHERS => '1');
+			ELSIF(row > 1660 AND row < 1900 AND column > p_topDigit AND column < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
