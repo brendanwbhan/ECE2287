@@ -28,8 +28,8 @@ ENTITY hw_image_generator IS
 	GENERIC(
 		p_left	:	INTEGER := 0; --860
 		p_right	:	INTEGER := 0; --1060
-		p_top		:	INTEGER := 0; --440
-		p_bottom	:	INTEGER := 0); --640
+		p_topDigit		:	INTEGER := 320; --440
+		p_bottomDigit	:	INTEGER := 760); --640
 	PORT(
 		s0	:	IN STD_LOGIC;
 		s1	:	IN	STD_LOGIC;
@@ -49,11 +49,11 @@ BEGIN
 	BEGIN
 		IF(disp_ena = '1') THEN	--display time
 			-- Display Minutes
-			IF(row > 18 AND row < 305 AND column > 290 AND column < 790) THEN --top dot
+			IF(row > 18 AND row < 305 AND column > p_topDigit AND column < p_bottomDigit) THEN --top dot
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			ELSIF(row > 323 AND row < 610 AND column > 290 AND column < 790) THEN --top dot
+			ELSIF(row > 323 AND row < 610 AND column > p_topDigit AND column < p_bottomDigit) THEN --top dot
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
@@ -68,27 +68,27 @@ BEGIN
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
 			-- Display seconds
-			ELSIF(row > 664 AND row < 951 AND column > 290 AND column < 790) THEN
+			ELSIF(row > 664 AND row < 951 AND column > p_topDigit AND column < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			ELSIF(row > 969 AND row < 1256 AND column > 290 AND column < 790) THEN
+			ELSIF(row > 969 AND row < 1256 AND column > p_topDigit AND column < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
 			
 			-- Display dot
-			ELSIF(row > 1274 AND row < 1292 AND column > 772 AND column < 790) THEN
+			ELSIF(row > 1274 AND row < 1292 AND column > (p_bottomDigit - 18) AND column < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
 				
 			-- Display milliseconds
-			ELSIF(row > 1310 AND row < 1597 AND column > 290 AND column < 790) THEN
+			ELSIF(row > 1310 AND row < 1597 AND column > p_topDigit AND column < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			ELSIF(row > 1615 AND row < 1902 AND column > 290 AND column < 790) THEN
+			ELSIF(row > 1615 AND row < 1902 AND column > p_topDigit AND column < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
