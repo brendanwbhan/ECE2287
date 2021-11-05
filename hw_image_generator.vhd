@@ -48,22 +48,47 @@ BEGIN
 	PROCESS(s0, s1, s2, s3, disp_ena, row, column)
 	BEGIN
 		IF(disp_ena = '1') THEN	--display time
-			-- Display two dots in the middle
-			IF(row > 935 AND row < 985 AND column > 440 AND column < 490) THEN --top dot
+			-- Display Minutes
+			IF(row > 18 AND row < 305 AND column > 290 AND column < 790) THEN --top dot
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			ELSIF (row > 935 AND row < 985 AND column > 590 AND column < 640) THEN --bottom dot
+			ELSIF(row > 323 AND row < 610 AND column > 290 AND column < 790) THEN --top dot
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
 				
-			-- Display first digit
-			ELSIF(s0 = '1' AND row > 5 AND row < 105 AND column > 430 AND column < 440) THEN --top signal
+			-- Display two dots
+			ELSIF(row > 628 AND row < 646 AND column > 440 AND column < 458) THEN --top signal
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			ELSIF(s0 = '1' AND row > 115 AND row < 125 AND column > 445 AND column < 545) THEN
+			ELSIF(row > 628 AND row < 646 AND column > 640 AND column < 658) THEN
+				red <= (OTHERS => '1');
+				green	<= (OTHERS => '1');
+				blue <= (OTHERS => '1');
+			-- Display seconds
+			ELSIF(row > 664 AND row < 951 AND column > 290 AND column < 790) THEN
+				red <= (OTHERS => '1');
+				green	<= (OTHERS => '1');
+				blue <= (OTHERS => '1');
+			ELSIF(row > 969 AND row < 1256 AND column > 290 AND column < 790) THEN
+				red <= (OTHERS => '1');
+				green	<= (OTHERS => '1');
+				blue <= (OTHERS => '1');
+			
+			-- Display dot
+			ELSIF(row > 1274 AND row < 1292 AND column > 772 AND column < 790) THEN
+				red <= (OTHERS => '1');
+				green	<= (OTHERS => '1');
+				blue <= (OTHERS => '1');
+				
+			-- Display milliseconds
+			ELSIF(row > 1310 AND row < 1597 AND column > 290 AND column < 790) THEN
+				red <= (OTHERS => '1');
+				green	<= (OTHERS => '1');
+				blue <= (OTHERS => '1');
+			ELSIF(row > 1615 AND row < 1902 AND column > 290 AND column < 790) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
