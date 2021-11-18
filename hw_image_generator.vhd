@@ -23,7 +23,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.led.all;
 
 entity hw_image_generator is
 	generic(
@@ -36,6 +35,7 @@ entity hw_image_generator is
 		s1	:	in	std_logic;
 		s2	:	in std_logic;
 		s3	:	in std_logic;
+		sw0, sw1, sw2, sw3: in std_logic;
 		disp_ena	:	in		std_logic;	--display enable ('1' = display time, '0' = blanking time)
 		column		:	in		integer;		--column pixel coordinate
 		row	:	in		integer;		--row pixel coordinate
@@ -45,23 +45,16 @@ entity hw_image_generator is
 
 end hw_image_generator;
 
---entity led_segment is
---		port (
---		s0	:	in std_logic;
---		s1	:	in	std_logic;
---		s2	:	in std_logic;
---		s3	:	in std_logic;
---		a, b, c, d, e, f ,g : out std_logic);
---end led_segment;
-
-
 architecture behavior of hw_image_generator is
 	type coor is array (0 to 3) of integer;
 	type display_coor is array (0 to 6) of coor;
 
 	signal num : std_logic_vector (3 downto 0) := "0110";
-	signal digit_pixel_range : display_coor;
 	signal a, b, c, d, e, f, g: std_logic := '0';
+	
+	shared variable digit_pixel_range : display_coor;
+	shared variable extra : integer := 0;
+	
 	function seven_segment_display(a, b, c, d, e, f, g	: std_logic:='0';
 											offset_x, offset_y		: integer := 0)
 											return display_coor is
@@ -116,15 +109,14 @@ architecture behavior of hw_image_generator is
 			return coordinate;
 		end seven_segment_display;
 		
-	begin
-	process(s0, s1, s2, s3, disp_ena, column, row, a, b, c, d, e, f, g)
-	
 	component led_segment is
 			port (sw0, sw1, sw2, sw3: IN STD_LOGIC;
 				a, b, c, d, e, f, g: OUT STD_LOGIC);
 	end component;
 	
-	--process
+	begin
+	process(s0, s1, s2, s3, disp_ena, column, row, a, b, c, d, e, f, g)
+	
 	begin
 		red <= (others => '0');
 		green <= (others => '0');
@@ -132,6 +124,7 @@ architecture behavior of hw_image_generator is
 		----------------------------------------------------------------------------
 		-- Create boxes containing the time number
 		IF(disp_ena = '1') THEN	--display time
+	
 			-- Display Minutes
 			IF(row > 20 AND row < 260 AND column > p_topDigit AND column < p_bottomDigit) THEN --top dot
 				red <= (OTHERS => '1');
@@ -185,283 +178,58 @@ architecture behavior of hw_image_generator is
 				red <= (OTHERS => '0');
 				green	<= (OTHERS => '0');
 				blue <= (OTHERS => '0');
-			END IF;	
-		ELSE								--blanking time
-			red <= (OTHERS => '0');
-			green <= (OTHERS => '0');
-			blue <= (OTHERS => '0');
-		END IF;
---		---------------------------------------------------------------------------------------------
-		
-		--for i in 0 to 6 loop
+			END IF;			
+			
+			for i in 0 to 6 loop			
+				
+				if (i >= 4) then
+					extra := 2;
+				elsif (i >= 2) then
+					extra := 1;
+				else
+					extra := 0;
+				end if;
 
-			-- First digit
-			--if (i = 0) then
-				digit_pixel_range <= seven_segment_display('1', '1', '1', '1', '1', '1', '1', 30, 350);
+				digit_pixel_range := seven_segment_display(a, b, c, d, e, f, g, 30 + 260*i + 40*extra, 350);
 				if (row > digit_pixel_range(0)(0) and row < digit_pixel_range(0)(1) and column > digit_pixel_range(0)(2) and column < digit_pixel_range(0)(3)) then
-					red <= (others => '1');
-					green <= (others => '0');
+					red <= (others => '0');
+					green <= (others => '1');
 					blue <= (others => '0');
 				end if;
 				if (row > digit_pixel_range(1)(0) and row < digit_pixel_range(1)(1) and column > digit_pixel_range(1)(2) and column < digit_pixel_range(1)(3)) then
-						red <= (others => '1');
-						green <= (others => '0');
+						red <= (others => '0');
+						green <= (others => '1');
 						blue <= (others => '0');
 				end if;
 				if (row > digit_pixel_range(2)(0) and row < digit_pixel_range(2)(1) and column > digit_pixel_range(2)(2) and column < digit_pixel_range(2)(3)) then
-					red <= (others => '1');
-					green <= (others => '0');
+					red <= (others => '0');
+					green <= (others => '1');
 					blue <= (others => '0');
 				end if;
 				if (row > digit_pixel_range(3)(0) and row < digit_pixel_range(3)(1) and column > digit_pixel_range(3)(2) and column < digit_pixel_range(3)(3)) then
-					red <= (others => '1');
-					green <= (others => '0');
+					red <= (others => '0');
+					green <= (others => '1');
 					blue <= (others => '0');
 				end if;
 				if (row > digit_pixel_range(4)(0) and row < digit_pixel_range(4)(1) and column > digit_pixel_range(4)(2) and column < digit_pixel_range(4)(3)) then
-					red <= (others => '1');
-					green <= (others => '0');
+					red <= (others => '0');
+					green <= (others => '1');
 					blue <= (others => '0');
 				end if;
 				if (row > digit_pixel_range(5)(0) and row < digit_pixel_range(5)(1) and column > digit_pixel_range(5)(2) and column < digit_pixel_range(5)(3)) then
-					red <= (others => '1');
-					green <= (others => '0');
+					red <= (others => '0');
+					green <= (others => '1');
 					blue <= (others => '0');
 				end if;
 				if (row > digit_pixel_range(6)(0) and row < digit_pixel_range(6)(1) and column > digit_pixel_range(6)(2) and column < digit_pixel_range(6)(3)) then
-					red <= (others => '1');
-					green <= (others => '0');
+					red <= (others => '0');
+					green <= (others => '1');
 					blue <= (others => '0');
-				end if;
---			elsif (i = 1) then
---				digit_pixel_range <= seven_segment_display('1', '1', '1', '1', '1', '1', '1', 20 + 260*i, 300);
---				if (row > digit_pixel_range(0)(0) and row < digit_pixel_range(0)(1) and column > digit_pixel_range(0)(2) and column < digit_pixel_range(0)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(1)(0) and row < digit_pixel_range(1)(1) and column > digit_pixel_range(1)(2) and column < digit_pixel_range(1)(3)) then
---						red <= (others => '1');
---						green <= (others => '0');
---						blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(2)(0) and row < digit_pixel_range(2)(1) and column > digit_pixel_range(2)(2) and column < digit_pixel_range(2)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(3)(0) and row < digit_pixel_range(3)(1) and column > digit_pixel_range(3)(2) and column < digit_pixel_range(3)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(4)(0) and row < digit_pixel_range(4)(1) and column > digit_pixel_range(4)(2) and column < digit_pixel_range(4)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(5)(0) and row < digit_pixel_range(5)(1) and column > digit_pixel_range(5)(2) and column < digit_pixel_range(5)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(6)(0) and row < digit_pixel_range(6)(1) and column > digit_pixel_range(6)(2) and column < digit_pixel_range(6)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---			elsif (i = 2) then
---				digit_pixel_range <= seven_segment_display('1', '1', '1', '1', '1', '1', '1', 20 + 260*i, 300);
---				if (row > digit_pixel_range(0)(0) and row < digit_pixel_range(0)(1) and column > digit_pixel_range(0)(2) and column < digit_pixel_range(0)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(1)(0) and row < digit_pixel_range(1)(1) and column > digit_pixel_range(1)(2) and column < digit_pixel_range(1)(3)) then
---						red <= (others => '1');
---						green <= (others => '0');
---						blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(2)(0) and row < digit_pixel_range(2)(1) and column > digit_pixel_range(2)(2) and column < digit_pixel_range(2)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(3)(0) and row < digit_pixel_range(3)(1) and column > digit_pixel_range(3)(2) and column < digit_pixel_range(3)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(4)(0) and row < digit_pixel_range(4)(1) and column > digit_pixel_range(4)(2) and column < digit_pixel_range(4)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(5)(0) and row < digit_pixel_range(5)(1) and column > digit_pixel_range(5)(2) and column < digit_pixel_range(5)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(6)(0) and row < digit_pixel_range(6)(1) and column > digit_pixel_range(6)(2) and column < digit_pixel_range(6)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---			elsif (i = 3) then
---				digit_pixel_range <= seven_segment_display('1', '1', '1', '1', '1', '1', '1', 20 + 260*i, 300);
---				if (row > digit_pixel_range(0)(0) and row < digit_pixel_range(0)(1) and column > digit_pixel_range(0)(2) and column < digit_pixel_range(0)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(1)(0) and row < digit_pixel_range(1)(1) and column > digit_pixel_range(1)(2) and column < digit_pixel_range(1)(3)) then
---						red <= (others => '1');
---						green <= (others => '0');
---						blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(2)(0) and row < digit_pixel_range(2)(1) and column > digit_pixel_range(2)(2) and column < digit_pixel_range(2)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(3)(0) and row < digit_pixel_range(3)(1) and column > digit_pixel_range(3)(2) and column < digit_pixel_range(3)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(4)(0) and row < digit_pixel_range(4)(1) and column > digit_pixel_range(4)(2) and column < digit_pixel_range(4)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(5)(0) and row < digit_pixel_range(5)(1) and column > digit_pixel_range(5)(2) and column < digit_pixel_range(5)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(6)(0) and row < digit_pixel_range(6)(1) and column > digit_pixel_range(6)(2) and column < digit_pixel_range(6)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---			elsif (i = 4) then
---				digit_pixel_range <= seven_segment_display('1', '1', '1', '1', '1', '1', '1', 20 + 260*i, 300);
---				if (row > digit_pixel_range(0)(0) and row < digit_pixel_range(0)(1) and column > digit_pixel_range(0)(2) and column < digit_pixel_range(0)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(1)(0) and row < digit_pixel_range(1)(1) and column > digit_pixel_range(1)(2) and column < digit_pixel_range(1)(3)) then
---						red <= (others => '1');
---						green <= (others => '0');
---						blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(2)(0) and row < digit_pixel_range(2)(1) and column > digit_pixel_range(2)(2) and column < digit_pixel_range(2)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(3)(0) and row < digit_pixel_range(3)(1) and column > digit_pixel_range(3)(2) and column < digit_pixel_range(3)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(4)(0) and row < digit_pixel_range(4)(1) and column > digit_pixel_range(4)(2) and column < digit_pixel_range(4)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(5)(0) and row < digit_pixel_range(5)(1) and column > digit_pixel_range(5)(2) and column < digit_pixel_range(5)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(6)(0) and row < digit_pixel_range(6)(1) and column > digit_pixel_range(6)(2) and column < digit_pixel_range(6)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---			elsif (i = 5) then
---				digit_pixel_range <= seven_segment_display('1', '1', '1', '1', '1', '1', '1', 20 + 260*i, 300);
---				if (row > digit_pixel_range(0)(0) and row < digit_pixel_range(0)(1) and column > digit_pixel_range(0)(2) and column < digit_pixel_range(0)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(1)(0) and row < digit_pixel_range(1)(1) and column > digit_pixel_range(1)(2) and column < digit_pixel_range(1)(3)) then
---						red <= (others => '1');
---						green <= (others => '0');
---						blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(2)(0) and row < digit_pixel_range(2)(1) and column > digit_pixel_range(2)(2) and column < digit_pixel_range(2)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(3)(0) and row < digit_pixel_range(3)(1) and column > digit_pixel_range(3)(2) and column < digit_pixel_range(3)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(4)(0) and row < digit_pixel_range(4)(1) and column > digit_pixel_range(4)(2) and column < digit_pixel_range(4)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(5)(0) and row < digit_pixel_range(5)(1) and column > digit_pixel_range(5)(2) and column < digit_pixel_range(5)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(6)(0) and row < digit_pixel_range(6)(1) and column > digit_pixel_range(6)(2) and column < digit_pixel_range(6)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---			else
---				digit_pixel_range <= seven_segment_display('1', '1', '1', '1', '1', '1', '1', 20 + 260*i, 300);
---				if (row > digit_pixel_range(0)(0) and row < digit_pixel_range(0)(1) and column > digit_pixel_range(0)(2) and column < digit_pixel_range(0)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(1)(0) and row < digit_pixel_range(1)(1) and column > digit_pixel_range(1)(2) and column < digit_pixel_range(1)(3)) then
---						red <= (others => '1');
---						green <= (others => '0');
---						blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(2)(0) and row < digit_pixel_range(2)(1) and column > digit_pixel_range(2)(2) and column < digit_pixel_range(2)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(3)(0) and row < digit_pixel_range(3)(1) and column > digit_pixel_range(3)(2) and column < digit_pixel_range(3)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(4)(0) and row < digit_pixel_range(4)(1) and column > digit_pixel_range(4)(2) and column < digit_pixel_range(4)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(5)(0) and row < digit_pixel_range(5)(1) and column > digit_pixel_range(5)(2) and column < digit_pixel_range(5)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---				if (row > digit_pixel_range(6)(0) and row < digit_pixel_range(6)(1) and column > digit_pixel_range(6)(2) and column < digit_pixel_range(6)(3)) then
---					red <= (others => '1');
---					green <= (others => '0');
---					blue <= (others => '0');
---				end if;
---			end if;
-			
---			 wait for 3 ns;
---		end loop;
-		
+				end if;				
+			end loop;
+		end if;
 	end process;
 	
-	begin
-	get_segment : led_segment port map(num(0), num(1), num(2), num(3), a, b, c, d, e, f, g);
+	get_segment1 : led_segment port map('1','0','0','0',a, b, c, d, e, f, g);
+	--get_segment2 : led_segment port map('0','0','0','0',a, b, c, d, e, f, g);
 end behavior;
