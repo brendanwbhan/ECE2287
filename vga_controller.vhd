@@ -24,7 +24,6 @@
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
 
 ENTITY vga_controller IS
 	GENERIC(
@@ -47,7 +46,8 @@ ENTITY vga_controller IS
 		column		:	OUT	INTEGER;		--horizontal pixel coordinate
 		row			:	OUT	INTEGER;		--vertical pixel coordinate
 		n_blank		:	OUT	STD_LOGIC;	--direct blacking output to DAC
-		n_sync		:	OUT	STD_LOGIC); --sync-on-green output to DAC
+		n_sync		:	OUT	STD_LOGIC; --sync-on-green output to DAC
+		clk			:	OUT 	STD_LOGIC);
 END vga_controller;
 
 ARCHITECTURE behavior OF vga_controller IS
