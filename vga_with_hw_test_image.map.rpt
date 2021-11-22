@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga_with_hw_test_image
-Fri Nov 19 22:30:50 2021
+Mon Nov 22 17:13:01 2021
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -14,30 +14,28 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. User-Specified and Inferred Latches
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: altpll0:inst2|altpll:altpll_component
- 15. Parameter Settings for User Entity Instance: vga_controller:inst1
- 16. Parameter Settings for User Entity Instance: hw_image_generator:inst
- 17. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0
- 18. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0
- 19. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1
- 20. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod2
- 21. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0
- 22. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0
- 23. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod1
- 24. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod0
- 25. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Div0
- 26. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod1
- 27. altpll Parameter Settings by Entity Instance
- 28. Port Connectivity Checks: "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data"
- 29. Port Connectivity Checks: "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data"
- 30. Post-Synthesis Netlist Statistics for Top Partition
- 31. Elapsed Time Per Partition
- 32. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: altpll0:inst2|altpll:altpll_component
+ 14. Parameter Settings for User Entity Instance: vga_controller:inst1
+ 15. Parameter Settings for User Entity Instance: hw_image_generator:inst
+ 16. Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0
+ 17. Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0
+ 18. Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0
+ 19. Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1
+ 20. Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0
+ 21. Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod1
+ 22. Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod0
+ 23. Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Div0
+ 24. Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod1
+ 25. altpll Parameter Settings by Entity Instance
+ 26. Port Connectivity Checks: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data"
+ 27. Port Connectivity Checks: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data"
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
 
 
 
@@ -64,16 +62,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 19 22:30:50 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 22 17:13:00 2021       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; vga_with_hw_test_image                      ;
 ; Top-level Entity Name              ; vga_with_hw_test_image                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,306                                       ;
-;     Total combinational functions  ; 1,283                                       ;
-;     Dedicated logic registers      ; 74                                          ;
-; Total registers                    ; 74                                          ;
-; Total pins                         ; 30                                          ;
+; Total logic elements               ; 1,240                                       ;
+;     Total combinational functions  ; 1,217                                       ;
+;     Dedicated logic registers      ; 90                                          ;
+; Total registers                    ; 90                                          ;
+; Total pins                         ; 33                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -191,6 +189,8 @@ agreement for further details.
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                ; Library ;
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------+---------+
+; ButtonControl.vhd                ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/ButtonControl.vhd          ;         ;
+; TimeSignalGenerator.vhd          ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeSignalGenerator.vhd    ;         ;
 ; TimeCounter.vhd                  ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd            ;         ;
 ; NumToDigit.vhd                   ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd             ;         ;
 ; led_segment.vhd                  ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/led_segment.vhd            ;         ;
@@ -223,23 +223,23 @@ agreement for further details.
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Estimated Total logic elements              ; 1,306                        ;
+; Estimated Total logic elements              ; 1,240                        ;
 ;                                             ;                              ;
-; Total combinational functions               ; 1283                         ;
+; Total combinational functions               ; 1217                         ;
 ; Logic element usage by number of LUT inputs ;                              ;
-;     -- 4 input functions                    ; 809                          ;
-;     -- 3 input functions                    ; 222                          ;
-;     -- <=2 input functions                  ; 252                          ;
+;     -- 4 input functions                    ; 751                          ;
+;     -- 3 input functions                    ; 209                          ;
+;     -- <=2 input functions                  ; 257                          ;
 ;                                             ;                              ;
 ; Logic elements by mode                      ;                              ;
-;     -- normal mode                          ; 1136                         ;
-;     -- arithmetic mode                      ; 147                          ;
+;     -- normal mode                          ; 1069                         ;
+;     -- arithmetic mode                      ; 148                          ;
 ;                                             ;                              ;
-; Total registers                             ; 74                           ;
-;     -- Dedicated logic registers            ; 74                           ;
+; Total registers                             ; 90                           ;
+;     -- Dedicated logic registers            ; 90                           ;
 ;     -- I/O registers                        ; 0                            ;
 ;                                             ;                              ;
-; I/O pins                                    ; 30                           ;
+; I/O pins                                    ; 33                           ;
 ;                                             ;                              ;
 ; Embedded Multiplier 9-bit elements          ; 0                            ;
 ;                                             ;                              ;
@@ -247,67 +247,65 @@ agreement for further details.
 ;     -- PLLs                                 ; 1                            ;
 ;                                             ;                              ;
 ; Maximum fan-out node                        ; vga_controller:inst1|row[31] ;
-; Maximum fan-out                             ; 153                          ;
-; Total fan-out                               ; 4605                         ;
-; Average fan-out                             ; 3.25                         ;
+; Maximum fan-out                             ; 108                          ;
+; Total fan-out                               ; 4396                         ;
+; Average fan-out                             ; 3.20                         ;
 +---------------------------------------------+------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                             ;
-+-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                        ; Entity Name            ; Library Name ;
-+-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |vga_with_hw_test_image                         ; 1283 (0)            ; 74 (0)                    ; 0           ; 0            ; 0       ; 0         ; 30   ; 0            ; |vga_with_hw_test_image                                                                                                                                                                    ; vga_with_hw_test_image ; work         ;
-;    |altpll0:inst2|                              ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|altpll0:inst2                                                                                                                                                      ; altpll0                ; work         ;
-;       |altpll:altpll_component|                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|altpll0:inst2|altpll:altpll_component                                                                                                                              ; altpll                 ; work         ;
-;          |altpll0_altpll:auto_generated|        ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|altpll0:inst2|altpll:altpll_component|altpll0_altpll:auto_generated                                                                                                ; altpll0_altpll         ; work         ;
-;    |hw_image_generator:inst|                    ; 1212 (829)          ; 23 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst                                                                                                                                            ; hw_image_generator     ; work         ;
-;       |TimerCounter:get_time|                   ; 316 (53)            ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time                                                                                                                      ; TimerCounter           ; work         ;
-;          |NumToDigit:min_data|                  ; 73 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data                                                                                                  ; NumToDigit             ; work         ;
-;             |lpm_divide:Div0|                   ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Div0                                                                                  ; lpm_divide             ; work         ;
-;                |lpm_divide_ihm:auto_generated|  ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated                                                    ; lpm_divide_ihm         ; work         ;
-;                   |sign_div_unsign_akh:divider| ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                        ; sign_div_unsign_akh    ; work         ;
-;                      |alt_u_div_84f:divider|    ; 31 (31)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider  ; alt_u_div_84f          ; work         ;
-;             |lpm_divide:Mod0|                   ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod0                                                                                  ; lpm_divide             ; work         ;
-;                |lpm_divide_o9m:auto_generated|  ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated                                                    ; lpm_divide_o9m         ; work         ;
-;                   |sign_div_unsign_dkh:divider| ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider                        ; sign_div_unsign_dkh    ; work         ;
-;                      |alt_u_div_e4f:divider|    ; 42 (42)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider  ; alt_u_div_e4f          ; work         ;
-;          |NumToDigit:msec_data|                 ; 117 (2)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data                                                                                                 ; NumToDigit             ; work         ;
-;             |lpm_divide:Div0|                   ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0                                                                                 ; lpm_divide             ; work         ;
-;                |lpm_divide_ihm:auto_generated|  ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated                                                   ; lpm_divide_ihm         ; work         ;
-;                   |sign_div_unsign_akh:divider| ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh    ; work         ;
-;                      |alt_u_div_84f:divider|    ; 43 (43)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f          ; work         ;
-;             |lpm_divide:Mod0|                   ; 55 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0                                                                                 ; lpm_divide             ; work         ;
-;                |lpm_divide_o9m:auto_generated|  ; 55 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated                                                   ; lpm_divide_o9m         ; work         ;
-;                   |sign_div_unsign_dkh:divider| ; 55 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider                       ; sign_div_unsign_dkh    ; work         ;
-;                      |alt_u_div_e4f:divider|    ; 55 (55)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider ; alt_u_div_e4f          ; work         ;
-;             |lpm_divide:Mod1|                   ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1                                                                                 ; lpm_divide             ; work         ;
-;                |lpm_divide_o9m:auto_generated|  ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1|lpm_divide_o9m:auto_generated                                                   ; lpm_divide_o9m         ; work         ;
-;                   |sign_div_unsign_dkh:divider| ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider                       ; sign_div_unsign_dkh    ; work         ;
-;                      |alt_u_div_e4f:divider|    ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider ; alt_u_div_e4f          ; work         ;
-;             |lpm_divide:Mod2|                   ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod2                                                                                 ; lpm_divide             ; work         ;
-;                |lpm_divide_o9m:auto_generated|  ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod2|lpm_divide_o9m:auto_generated                                                   ; lpm_divide_o9m         ; work         ;
-;                   |sign_div_unsign_dkh:divider| ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod2|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider                       ; sign_div_unsign_dkh    ; work         ;
-;                      |alt_u_div_e4f:divider|    ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod2|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider ; alt_u_div_e4f          ; work         ;
-;          |NumToDigit:sec_data|                  ; 73 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data                                                                                                  ; NumToDigit             ; work         ;
-;             |lpm_divide:Div0|                   ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0                                                                                  ; lpm_divide             ; work         ;
-;                |lpm_divide_ihm:auto_generated|  ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated                                                    ; lpm_divide_ihm         ; work         ;
-;                   |sign_div_unsign_akh:divider| ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                        ; sign_div_unsign_akh    ; work         ;
-;                      |alt_u_div_84f:divider|    ; 31 (31)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider  ; alt_u_div_84f          ; work         ;
-;             |lpm_divide:Mod0|                   ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0                                                                                  ; lpm_divide             ; work         ;
-;                |lpm_divide_o9m:auto_generated|  ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated                                                    ; lpm_divide_o9m         ; work         ;
-;                   |sign_div_unsign_dkh:divider| ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider                        ; sign_div_unsign_dkh    ; work         ;
-;                      |alt_u_div_e4f:divider|    ; 42 (42)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider  ; alt_u_div_e4f          ; work         ;
-;       |led_segment:get_segment_min_1|           ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|led_segment:get_segment_min_1                                                                                                              ; led_segment            ; work         ;
-;       |led_segment:get_segment_min_2|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|led_segment:get_segment_min_2                                                                                                              ; led_segment            ; work         ;
-;       |led_segment:get_segment_msec_1|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|led_segment:get_segment_msec_1                                                                                                             ; led_segment            ; work         ;
-;       |led_segment:get_segment_msec_2|          ; 27 (27)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|led_segment:get_segment_msec_2                                                                                                             ; led_segment            ; work         ;
-;       |led_segment:get_segment_msec_3|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|led_segment:get_segment_msec_3                                                                                                             ; led_segment            ; work         ;
-;       |led_segment:get_segment_sec_1|           ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|led_segment:get_segment_sec_1                                                                                                              ; led_segment            ; work         ;
-;       |led_segment:get_segment_sec_2|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst|led_segment:get_segment_sec_2                                                                                                              ; led_segment            ; work         ;
-;    |vga_controller:inst1|                       ; 71 (71)             ; 51 (51)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|vga_controller:inst1                                                                                                                                               ; vga_controller         ; work         ;
-+-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                               ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                          ; Entity Name            ; Library Name ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; |vga_with_hw_test_image                         ; 1217 (0)            ; 90 (0)                    ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |vga_with_hw_test_image                                                                                                                                                                      ; vga_with_hw_test_image ; work         ;
+;    |ButtonControl:inst6|                        ; 1 (1)               ; 1 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|ButtonControl:inst6                                                                                                                                                  ; ButtonControl          ; work         ;
+;       |flipflop:flipflop_mapping|               ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|ButtonControl:inst6|flipflop:flipflop_mapping                                                                                                                        ; flipflop               ; work         ;
+;    |TimeSignalGenerator:inst8|                  ; 376 (0)             ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8                                                                                                                                            ; TimeSignalGenerator    ; work         ;
+;       |TimerCounter:get_time|                   ; 322 (70)            ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time                                                                                                                      ; TimerCounter           ; work         ;
+;          |NumToDigit:min_data|                  ; 73 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data                                                                                                  ; NumToDigit             ; work         ;
+;             |lpm_divide:Div0|                   ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Div0                                                                                  ; lpm_divide             ; work         ;
+;                |lpm_divide_ihm:auto_generated|  ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated                                                    ; lpm_divide_ihm         ; work         ;
+;                   |sign_div_unsign_akh:divider| ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                        ; sign_div_unsign_akh    ; work         ;
+;                      |alt_u_div_84f:divider|    ; 31 (31)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider  ; alt_u_div_84f          ; work         ;
+;             |lpm_divide:Mod0|                   ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod0                                                                                  ; lpm_divide             ; work         ;
+;                |lpm_divide_o9m:auto_generated|  ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated                                                    ; lpm_divide_o9m         ; work         ;
+;                   |sign_div_unsign_dkh:divider| ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider                        ; sign_div_unsign_dkh    ; work         ;
+;                      |alt_u_div_e4f:divider|    ; 42 (42)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider  ; alt_u_div_e4f          ; work         ;
+;          |NumToDigit:msec_data|                 ; 106 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data                                                                                                 ; NumToDigit             ; work         ;
+;             |lpm_divide:Div0|                   ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0                                                                                 ; lpm_divide             ; work         ;
+;                |lpm_divide_ihm:auto_generated|  ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated                                                   ; lpm_divide_ihm         ; work         ;
+;                   |sign_div_unsign_akh:divider| ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh    ; work         ;
+;                      |alt_u_div_84f:divider|    ; 43 (43)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f          ; work         ;
+;             |lpm_divide:Mod0|                   ; 55 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0                                                                                 ; lpm_divide             ; work         ;
+;                |lpm_divide_o9m:auto_generated|  ; 55 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated                                                   ; lpm_divide_o9m         ; work         ;
+;                   |sign_div_unsign_dkh:divider| ; 55 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider                       ; sign_div_unsign_dkh    ; work         ;
+;                      |alt_u_div_e4f:divider|    ; 55 (55)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider ; alt_u_div_e4f          ; work         ;
+;             |lpm_divide:Mod1|                   ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1                                                                                 ; lpm_divide             ; work         ;
+;                |lpm_divide_o9m:auto_generated|  ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1|lpm_divide_o9m:auto_generated                                                   ; lpm_divide_o9m         ; work         ;
+;                   |sign_div_unsign_dkh:divider| ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider                       ; sign_div_unsign_dkh    ; work         ;
+;                      |alt_u_div_e4f:divider|    ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider ; alt_u_div_e4f          ; work         ;
+;          |NumToDigit:sec_data|                  ; 73 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data                                                                                                  ; NumToDigit             ; work         ;
+;             |lpm_divide:Div0|                   ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0                                                                                  ; lpm_divide             ; work         ;
+;                |lpm_divide_ihm:auto_generated|  ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated                                                    ; lpm_divide_ihm         ; work         ;
+;                   |sign_div_unsign_akh:divider| ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                        ; sign_div_unsign_akh    ; work         ;
+;                      |alt_u_div_84f:divider|    ; 31 (31)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider  ; alt_u_div_84f          ; work         ;
+;             |lpm_divide:Mod0|                   ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0                                                                                  ; lpm_divide             ; work         ;
+;                |lpm_divide_o9m:auto_generated|  ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated                                                    ; lpm_divide_o9m         ; work         ;
+;                   |sign_div_unsign_dkh:divider| ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider                        ; sign_div_unsign_dkh    ; work         ;
+;                      |alt_u_div_e4f:divider|    ; 42 (42)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider  ; alt_u_div_e4f          ; work         ;
+;       |led_segment:get_segment_min_1|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|led_segment:get_segment_min_1                                                                                                              ; led_segment            ; work         ;
+;       |led_segment:get_segment_min_2|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|led_segment:get_segment_min_2                                                                                                              ; led_segment            ; work         ;
+;       |led_segment:get_segment_msec_1|          ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|led_segment:get_segment_msec_1                                                                                                             ; led_segment            ; work         ;
+;       |led_segment:get_segment_msec_2|          ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|led_segment:get_segment_msec_2                                                                                                             ; led_segment            ; work         ;
+;       |led_segment:get_segment_sec_1|           ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|led_segment:get_segment_sec_1                                                                                                              ; led_segment            ; work         ;
+;       |led_segment:get_segment_sec_2|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|led_segment:get_segment_sec_2                                                                                                              ; led_segment            ; work         ;
+;    |altpll0:inst2|                              ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|altpll0:inst2                                                                                                                                                        ; altpll0                ; work         ;
+;       |altpll:altpll_component|                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|altpll0:inst2|altpll:altpll_component                                                                                                                                ; altpll                 ; work         ;
+;          |altpll0_altpll:auto_generated|        ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|altpll0:inst2|altpll:altpll_component|altpll0_altpll:auto_generated                                                                                                  ; altpll0_altpll         ; work         ;
+;    |hw_image_generator:inst|                    ; 773 (773)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|hw_image_generator:inst                                                                                                                                              ; hw_image_generator     ; work         ;
+;    |vga_controller:inst1|                       ; 67 (67)             ; 51 (51)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_with_hw_test_image|vga_controller:inst1                                                                                                                                                 ; vga_controller         ; work         ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -318,28 +316,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+---------------------------------------+-----------------+
 ; Altera ; ALTPLL       ; 12.1    ; N/A          ; N/A          ; |vga_with_hw_test_image|altpll0:inst2 ; altpll0.vhd     ;
 +--------+--------------+---------+--------------+--------------+---------------------------------------+-----------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                                             ;
-+--------------------------------------------------------------+---------------------------------------------------------+------------------------+
-; Latch Name                                                   ; Latch Enable Signal                                     ; Free of Timing Hazards ;
-+--------------------------------------------------------------+---------------------------------------------------------+------------------------+
-; hw_image_generator:inst|TimerCounter:get_time|counter_sec[1] ; hw_image_generator:inst|TimerCounter:get_time|LessThan1 ; yes                    ;
-; hw_image_generator:inst|TimerCounter:get_time|counter_sec[0] ; hw_image_generator:inst|TimerCounter:get_time|LessThan1 ; yes                    ;
-; hw_image_generator:inst|TimerCounter:get_time|counter_sec[2] ; hw_image_generator:inst|TimerCounter:get_time|LessThan1 ; yes                    ;
-; hw_image_generator:inst|TimerCounter:get_time|counter_sec[3] ; hw_image_generator:inst|TimerCounter:get_time|LessThan1 ; yes                    ;
-; hw_image_generator:inst|TimerCounter:get_time|counter_min[1] ; hw_image_generator:inst|TimerCounter:get_time|LessThan2 ; yes                    ;
-; hw_image_generator:inst|TimerCounter:get_time|counter_min[0] ; hw_image_generator:inst|TimerCounter:get_time|LessThan2 ; yes                    ;
-; hw_image_generator:inst|TimerCounter:get_time|counter_min[2] ; hw_image_generator:inst|TimerCounter:get_time|LessThan2 ; yes                    ;
-; hw_image_generator:inst|TimerCounter:get_time|counter_min[3] ; hw_image_generator:inst|TimerCounter:get_time|LessThan2 ; yes                    ;
-; hw_image_generator:inst|TimerCounter:get_time|counter_sec[4] ; hw_image_generator:inst|TimerCounter:get_time|LessThan1 ; yes                    ;
-; hw_image_generator:inst|TimerCounter:get_time|counter_sec[5] ; hw_image_generator:inst|TimerCounter:get_time|LessThan1 ; yes                    ;
-; hw_image_generator:inst|TimerCounter:get_time|counter_min[5] ; hw_image_generator:inst|TimerCounter:get_time|LessThan2 ; yes                    ;
-; hw_image_generator:inst|TimerCounter:get_time|counter_min[4] ; hw_image_generator:inst|TimerCounter:get_time|LessThan2 ; yes                    ;
-; Number of user-specified and inferred latches = 12           ;                                                         ;                        ;
-+--------------------------------------------------------------+---------------------------------------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +---------------------------------------------------------------------------------+
@@ -358,12 +334,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 74    ;
-; Number of registers using Synchronous Clear  ; 16    ;
+; Total registers                              ; 90    ;
+; Number of registers using Synchronous Clear  ; 19    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 7     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 31    ;
+; Number of registers using Clock Enable       ; 50    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -373,22 +349,25 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; vga_controller:inst1|column[0]         ; 32      ;
-; vga_controller:inst1|row[31]           ; 153     ;
-; vga_controller:inst1|row[0]            ; 15      ;
-; vga_controller:inst1|column[31]        ; 83      ;
+; vga_controller:inst1|row[0]            ; 14      ;
+; vga_controller:inst1|row[31]           ; 108     ;
+; vga_controller:inst1|column[0]         ; 36      ;
+; vga_controller:inst1|column[31]        ; 100     ;
 ; Total number of inverted registers = 4 ;         ;
 +----------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |vga_with_hw_test_image|vga_controller:inst1|v_count     ;
-; 51:1               ; 2 bits    ; 68 LEs        ; 4 LEs                ; 64 LEs                 ; No         ; |vga_with_hw_test_image|hw_image_generator:inst|green[7] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|counter_msec[0] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|counter_min[5]  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |vga_with_hw_test_image|TimeSignalGenerator:inst8|TimerCounter:get_time|counter_sec[4]  ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |vga_with_hw_test_image|vga_controller:inst1|v_count                                    ;
+; 44:1               ; 2 bits    ; 58 LEs        ; 4 LEs                ; 54 LEs                 ; No         ; |vga_with_hw_test_image|hw_image_generator:inst|blue[7]                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------+
@@ -797,233 +776,210 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0 ;
-+------------------------+----------------+-------------------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                                      ;
-+------------------------+----------------+-------------------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                                                                   ;
-; LPM_WIDTHD             ; 7              ; Untyped                                                                                   ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                   ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                   ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                                   ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                   ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                   ;
-; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                                                                   ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                   ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                   ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                              ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                              ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                            ;
-+------------------------+----------------+-------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                       ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                                                                    ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                             ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0 ;
-+------------------------+----------------+-------------------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                                      ;
-+------------------------+----------------+-------------------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                                                                   ;
-; LPM_WIDTHD             ; 4              ; Untyped                                                                                   ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                   ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                   ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                                   ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                   ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                   ;
-; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                                                                                   ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                   ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                   ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                              ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                              ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                            ;
-+------------------------+----------------+-------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                        ;
++------------------------+----------------+---------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                                                                     ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                     ;
+; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                                                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                              ;
++------------------------+----------------+---------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1 ;
-+------------------------+----------------+-------------------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                                      ;
-+------------------------+----------------+-------------------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                                                                   ;
-; LPM_WIDTHD             ; 7              ; Untyped                                                                                   ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                   ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                   ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                                   ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                   ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                   ;
-; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                                                                   ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                   ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                   ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                              ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                              ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                            ;
-+------------------------+----------------+-------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                        ;
++------------------------+----------------+---------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                                                                     ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                     ;
+; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                                                                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                              ;
++------------------------+----------------+---------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod2 ;
-+------------------------+----------------+-------------------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                                      ;
-+------------------------+----------------+-------------------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                                                                   ;
-; LPM_WIDTHD             ; 7              ; Untyped                                                                                   ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                   ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                   ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                                   ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                   ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                   ;
-; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                                                                   ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                   ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                   ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                              ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                              ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                            ;
-+------------------------+----------------+-------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1 ;
++------------------------+----------------+---------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                        ;
++------------------------+----------------+---------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                                                                     ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                     ;
+; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                                                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                              ;
++------------------------+----------------+---------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0 ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                                     ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                                                                  ;
-; LPM_WIDTHD             ; 7              ; Untyped                                                                                  ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                  ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                  ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                                  ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                  ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                  ;
-; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                                                                  ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                  ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                             ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                           ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                       ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                                                                    ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                                                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                             ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0 ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                                     ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                                                                  ;
-; LPM_WIDTHD             ; 4              ; Untyped                                                                                  ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                  ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                  ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                                  ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                  ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                  ;
-; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                                                                                  ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                  ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                             ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                           ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod1 ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                       ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                                                                    ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                             ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod1 ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                                     ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                                                                  ;
-; LPM_WIDTHD             ; 7              ; Untyped                                                                                  ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                  ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                  ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                                  ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                  ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                  ;
-; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                                                                  ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                  ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                             ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                           ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                       ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                                                                    ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                             ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod0 ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                                     ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                                                                  ;
-; LPM_WIDTHD             ; 7              ; Untyped                                                                                  ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                  ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                  ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                                  ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                  ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                  ;
-; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                                                                  ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                  ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                             ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                           ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                       ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                                                                    ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                                                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                             ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Div0 ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                                     ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                                                                  ;
-; LPM_WIDTHD             ; 4              ; Untyped                                                                                  ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                  ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                  ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                                  ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                  ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                  ;
-; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                                                                                  ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                  ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                             ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                           ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod1 ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                                     ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                                                                  ;
-; LPM_WIDTHD             ; 7              ; Untyped                                                                                  ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                  ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                  ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                                  ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                  ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                  ;
-; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                                                                  ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                  ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                             ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                           ;
-+------------------------+----------------+------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|lpm_divide:Mod1 ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                       ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                                                                    ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                             ;
++------------------------+----------------+--------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1044,24 +1000,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+---------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data"                       ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; num[6]    ; Input  ; Info     ; Stuck at GND                                                                        ;
-; first_dig ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data" ;
++--------+-------+----------+---------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                             ;
++--------+-------+----------+---------------------------------------------------------------------+
+; num[6] ; Input ; Info     ; Stuck at GND                                                        ;
++--------+-------+----------+---------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data"                       ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; num[6]    ; Input  ; Info     ; Stuck at GND                                                                        ;
-; first_dig ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data" ;
++--------+-------+----------+---------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                             ;
++--------+-------+----------+---------------------------------------------------------------------+
+; num[6] ; Input ; Info     ; Stuck at GND                                                        ;
++--------+-------+----------+---------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -1069,28 +1023,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 30                          ;
-; cycloneiii_ff         ; 74                          ;
-;     CLR               ; 1                           ;
-;     ENA               ; 25                          ;
-;     ENA CLR           ; 6                           ;
-;     SCLR              ; 16                          ;
-;     plain             ; 26                          ;
-; cycloneiii_lcell_comb ; 1285                        ;
-;     arith             ; 147                         ;
+; boundary_port         ; 33                          ;
+; cycloneiii_ff         ; 90                          ;
+;     ENA               ; 31                          ;
+;     ENA SCLR          ; 19                          ;
+;     plain             ; 40                          ;
+; cycloneiii_lcell_comb ; 1219                        ;
+;     arith             ; 148                         ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 74                          ;
-;         3 data inputs ; 66                          ;
-;     normal            ; 1138                        ;
-;         0 data inputs ; 24                          ;
+;         2 data inputs ; 78                          ;
+;         3 data inputs ; 63                          ;
+;     normal            ; 1071                        ;
+;         0 data inputs ; 23                          ;
 ;         1 data inputs ; 9                           ;
-;         2 data inputs ; 140                         ;
-;         3 data inputs ; 156                         ;
-;         4 data inputs ; 809                         ;
+;         2 data inputs ; 142                         ;
+;         3 data inputs ; 146                         ;
+;         4 data inputs ; 751                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 21.50                       ;
-; Average LUT depth     ; 13.45                       ;
+; Max LUT depth         ; 20.20                       ;
+; Average LUT depth     ; 13.56                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1109,12 +1061,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Fri Nov 19 22:30:30 2021
+    Info: Processing started: Mon Nov 22 17:12:39 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga_with_hw_test_image -c vga_with_hw_test_image
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 4 design units, including 2 entities, in source file buttoncontrol.vhd
+    Info (12022): Found design unit 1: flipflop-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/ButtonControl.vhd Line: 12
+    Info (12022): Found design unit 2: ButtonControl-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/ButtonControl.vhd Line: 33
+    Info (12023): Found entity 1: flipflop File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/ButtonControl.vhd Line: 6
+    Info (12023): Found entity 2: ButtonControl File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/ButtonControl.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file timesignalgenerator.vhd
+    Info (12022): Found design unit 1: TimeSignalGenerator-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeSignalGenerator.vhd Line: 13
+    Info (12023): Found entity 1: TimeSignalGenerator File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeSignalGenerator.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file timecounter.vhd
-    Info (12022): Found design unit 1: TimerCounter-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 16
+    Info (12022): Found design unit 1: TimerCounter-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 18
     Info (12023): Found entity 1: TimerCounter File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file numtodigit.vhd
     Info (12022): Found design unit 1: NumToDigit-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 18
@@ -1128,7 +1088,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file vga_con
     Info (12022): Found design unit 1: vga_controller-behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/vga_controller.vhd Line: 53
     Info (12023): Found entity 1: vga_controller File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/vga_controller.vhd Line: 28
 Info (12021): Found 2 design units, including 1 entities, in source file hw_image_generator.vhd
-    Info (12022): Found design unit 1: hw_image_generator-behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/hw_image_generator.vhd Line: 45
+    Info (12022): Found design unit 1: hw_image_generator-behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/hw_image_generator.vhd Line: 46
     Info (12023): Found entity 1: hw_image_generator File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/hw_image_generator.vhd Line: 27
 Info (12021): Found 2 design units, including 1 entities, in source file vga_pll.vhd
     Info (12022): Found design unit 1: vga_pll-SYN File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/vga_pll.vhd Line: 52
@@ -1137,6 +1097,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file altpll0
     Info (12022): Found design unit 1: altpll0-SYN File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/altpll0.vhd Line: 52
     Info (12023): Found entity 1: altpll0 File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/altpll0.vhd Line: 42
 Info (12127): Elaborating entity "vga_with_hw_test_image" for the top level hierarchy
+Warning (275011): Block or symbol "hw_image_generator" of instance "inst" overlaps another block or symbol
 Info (12128): Elaborating entity "altpll0" for hierarchy "altpll0:inst2"
 Info (12128): Elaborating entity "altpll" for hierarchy "altpll0:inst2|altpll:altpll_component" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/altpll0.vhd Line: 135
 Info (12130): Elaborated megafunction instantiation "altpll0:inst2|altpll:altpll_component" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/altpll0.vhd Line: 135
@@ -1202,43 +1163,25 @@ Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:
 Warning (10541): VHDL Signal Declaration warning at vga_controller.vhd(50): used implicit default value for signal "clk" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/vga_controller.vhd Line: 50
 Info (12128): Elaborating entity "hw_image_generator" for hierarchy "hw_image_generator:inst"
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "digit_pixel_range" into its bus
-Info (12128): Elaborating entity "TimerCounter" for hierarchy "hw_image_generator:inst|TimerCounter:get_time" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/hw_image_generator.vhd Line: 240
-Warning (10036): Verilog HDL or VHDL warning at TimeCounter.vhd(38): object "sec_1st_dig" assigned a value but never read File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 38
-Warning (10036): Verilog HDL or VHDL warning at TimeCounter.vhd(42): object "min_1st_dig" assigned a value but never read File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 42
-Warning (10492): VHDL Process Statement warning at TimeCounter.vhd(61): signal "counter_msec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 61
-Warning (10492): VHDL Process Statement warning at TimeCounter.vhd(63): signal "counter_sec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 63
-Warning (10492): VHDL Process Statement warning at TimeCounter.vhd(65): signal "counter_sec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 65
-Warning (10492): VHDL Process Statement warning at TimeCounter.vhd(67): signal "counter_min" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 67
-Warning (10492): VHDL Process Statement warning at TimeCounter.vhd(69): signal "counter_min" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 69
-Warning (10631): VHDL Process Statement warning at TimeCounter.vhd(48): inferring latch(es) for signal or variable "counter_sec", which holds its previous value in one or more paths through the process File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 48
-Warning (10631): VHDL Process Statement warning at TimeCounter.vhd(48): inferring latch(es) for signal or variable "counter_min", which holds its previous value in one or more paths through the process File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 48
-Info (10041): Inferred latch for "counter_min[0]" at TimeCounter.vhd(48) File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 48
-Info (10041): Inferred latch for "counter_min[1]" at TimeCounter.vhd(48) File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 48
-Info (10041): Inferred latch for "counter_min[2]" at TimeCounter.vhd(48) File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 48
-Info (10041): Inferred latch for "counter_min[3]" at TimeCounter.vhd(48) File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 48
-Info (10041): Inferred latch for "counter_min[4]" at TimeCounter.vhd(48) File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 48
-Info (10041): Inferred latch for "counter_min[5]" at TimeCounter.vhd(48) File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 48
-Info (10041): Inferred latch for "counter_sec[0]" at TimeCounter.vhd(48) File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 48
-Info (10041): Inferred latch for "counter_sec[1]" at TimeCounter.vhd(48) File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 48
-Info (10041): Inferred latch for "counter_sec[2]" at TimeCounter.vhd(48) File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 48
-Info (10041): Inferred latch for "counter_sec[3]" at TimeCounter.vhd(48) File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 48
-Info (10041): Inferred latch for "counter_sec[4]" at TimeCounter.vhd(48) File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 48
-Info (10041): Inferred latch for "counter_sec[5]" at TimeCounter.vhd(48) File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 48
-Info (12128): Elaborating entity "NumToDigit" for hierarchy "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 75
-Info (12128): Elaborating entity "led_segment" for hierarchy "hw_image_generator:inst|led_segment:get_segment_min_1" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/hw_image_generator.vhd Line: 242
-Info (278001): Inferred 10 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 27
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|Mod1" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|Mod2" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 30
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 27
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|Mod1" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 27
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:min_data|Mod1" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
-Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 27
-Info (12133): Instantiated megafunction "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 27
+Info (12128): Elaborating entity "TimeSignalGenerator" for hierarchy "TimeSignalGenerator:inst8"
+Info (12128): Elaborating entity "TimerCounter" for hierarchy "TimeSignalGenerator:inst8|TimerCounter:get_time" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeSignalGenerator.vhd Line: 32
+Warning (10492): VHDL Process Statement warning at TimeCounter.vhd(58): signal "clk_is_running" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 58
+Info (12128): Elaborating entity "NumToDigit" for hierarchy "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeCounter.vhd Line: 81
+Info (12128): Elaborating entity "led_segment" for hierarchy "TimeSignalGenerator:inst8|led_segment:get_segment_min_1" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/TimeSignalGenerator.vhd Line: 34
+Info (12128): Elaborating entity "ButtonControl" for hierarchy "ButtonControl:inst6"
+Info (12128): Elaborating entity "flipflop" for hierarchy "ButtonControl:inst6|flipflop:flipflop_mapping" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/ButtonControl.vhd Line: 44
+Info (278001): Inferred 9 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 27
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 27
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|Mod1" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|Mod1" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 27
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|Mod1" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
+Info (12130): Elaborated megafunction instantiation "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 27
+Info (12133): Instantiated megafunction "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 27
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1253,8 +1196,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_7pc File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/db/add_sub_7pc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
     Info (12023): Found entity 1: add_sub_8pc File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/db/add_sub_8pc.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
-Info (12133): Instantiated megafunction "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
+Info (12130): Elaborated megafunction instantiation "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 27
+Info (12133): Instantiated megafunction "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 27
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12130): Elaborated megafunction instantiation "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
+Info (12133): Instantiated megafunction "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1265,20 +1214,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_akh File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/db/sign_div_unsign_akh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_84f.tdf
     Info (12023): Found entity 1: alt_u_div_84f File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/db/alt_u_div_84f.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod2" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 30
-Info (12133): Instantiated megafunction "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod2" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 30
-    Info (12134): Parameter "LPM_WIDTHN" = "7"
-    Info (12134): Parameter "LPM_WIDTHD" = "7"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 27
-Info (12133): Instantiated megafunction "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 27
-    Info (12134): Parameter "LPM_WIDTHN" = "7"
-    Info (12134): Parameter "LPM_WIDTHD" = "7"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
-Info (12133): Instantiated megafunction "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
+Info (12130): Elaborated megafunction instantiation "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
+Info (12133): Instantiated megafunction "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/NumToDigit.vhd Line: 28
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1288,18 +1225,20 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "n_sync" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "hw_image_generator:inst|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider|add_sub_6_result_int[0]~14" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/db/alt_u_div_e4f.tdf Line: 57
+    Info (17048): Logic cell "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider|add_sub_6_result_int[0]~14" File: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/db/alt_u_div_e4f.tdf Line: 57
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1360 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "resetn"
+Info (21057): Implemented 1297 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 1329 logic cells
+    Info (21061): Implemented 1263 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Fri Nov 19 22:30:50 2021
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:31
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4815 megabytes
+    Info: Processing ended: Mon Nov 22 17:13:01 2021
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:36
 
 

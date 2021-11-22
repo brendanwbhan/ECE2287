@@ -31,11 +31,12 @@ entity hw_image_generator is
 		p_topDigit		:	integer := 340; --440
 		p_bottomDigit	:	integer := 740); --640
 	port(
-		CLK_50MHz : in std_logic;
+
 		disp_ena	:	in		std_logic;	--display enable ('1' = display time, '0' = blanking time)
-		row	:	in		integer;		--row pixel coordinate
-		column		:	in		integer;		--column pixel coordinate
-		
+		column	:	in		integer;		--column pixel coordinate
+		row		:	in		integer;		--row pixel coordinate
+		a, b, c, d, e, f, g: std_logic_vector(0 to 5);
+
 		red		:	out	std_logic_vector(7 downto 0) := (others => '0');  --red magnitude output to DAC
 		green		:	out	std_logic_vector(7 downto 0) := (others => '0');  --green magnitude output to DAC
 		blue		:	out	std_logic_vector(7 downto 0) := (others => '0')); --blue magnitude output to DAC
@@ -46,11 +47,11 @@ architecture behavior of hw_image_generator is
 	type coor is array (0 to 3) of integer;
 	type display_coor is array (0 to 6) of coor;
 
-	signal num : std_logic_vector (3 downto 0) := "0110";
-	signal a, b, c, d, e, f, g: std_logic_vector(0 to 6);
-	signal msec_digits : std_logic_vector (11 downto 0);
-	signal sec_digits : std_logic_vector (7 downto 0);
-	signal min_digits : std_logic_vector (7 downto 0);
+	-- signal num : std_logic_vector (3 downto 0) := "0110";
+	--
+	-- signal msec_digits : std_logic_vector (7 downto 0);
+	-- signal sec_digits : std_logic_vector (7 downto 0);
+	-- signal min_digits : std_logic_vector (7 downto 0);
 
 	shared variable digit_pixel_range : display_coor;
 	shared variable extra : integer := 0;
@@ -109,21 +110,8 @@ architecture behavior of hw_image_generator is
 			return coordinate;
 		end seven_segment_display;
 
-	component led_segment is
-			port (sw0, sw1, sw2, sw3: IN STD_LOGIC;
-				a, b, c, d, e, f, g: OUT STD_LOGIC);
-	end component;
-
-	component TimerCounter is
-		port(
-			clk : in std_logic;
-			msec_digits : out std_logic_vector (11 downto 0);
-			sec_digits : out std_logic_vector (7 downto 0);
-			min_digits : out std_logic_vector (7 downto 0));
-	end component;
-
 	begin
-	process(disp_ena, column, row, a, b, c, d, e, f, g)
+	process(disp_ena, row, column, a, b, c, d, e, f, g)
 
 	begin
 		red <= (others => '0');
@@ -134,61 +122,57 @@ architecture behavior of hw_image_generator is
 		IF(disp_ena = '1') THEN	--display time
 
 			-- Display Minutes
-			IF(row > 20 AND row < 260 AND column > p_topDigit AND column < p_bottomDigit) THEN --top dot
+			IF(column > 20 + 130 AND column < 260 + 130 AND row > p_topDigit AND row < p_bottomDigit) THEN --top dot
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			ELSIF(row > 280 AND row < 520 AND column > p_topDigit AND column < p_bottomDigit) THEN --top dot
+			ELSIF(column > 280 + 130 AND column < 520 + 130 AND row > p_topDigit AND row < p_bottomDigit) THEN --top dot
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
 
 			-- Display two dots
-			ELSIF(row > 540 AND row < 560 AND column > 490 AND column < 510) THEN --top signal
+			ELSIF(column > 540 + 130 AND column < 560 + 130 AND row > 490 AND row < 510) THEN --top signal
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			ELSIF(row > 540 AND row < 560 AND column > 590 AND column < 610) THEN
+			ELSIF(column > 540 + 130 AND column < 560 + 130 AND row > 590 AND row < 610) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
 
 			-- Display seconds
-			ELSIF(row > 580 AND row < 820 AND column > p_topDigit AND column < p_bottomDigit) THEN
+			ELSIF(column > 580 + 130 AND column < 820 + 130 AND row > p_topDigit AND row < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			ELSIF(row > 840 AND row < 1080 AND column > p_topDigit AND column < p_bottomDigit) THEN
+			ELSIF(column > 840 + 130 AND column < 1080+ 130  AND row > p_topDigit AND row < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
 
 			-- Display dot
-			ELSIF(row > 1100 AND row < 1120 AND column > (p_bottomDigit - 20) AND column < p_bottomDigit) THEN
+			ELSIF(column > 1100+ 130  AND column < 1120+ 130  AND row > (p_bottomDigit - 20) AND row < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
 
 			-- Display milliseconds
-			ELSIF(row > 1140 AND row < 1380 AND column > p_topDigit AND column < p_bottomDigit) THEN
+			ELSIF(column > 1140+ 130  AND column < 1380+ 130  AND row > p_topDigit AND row < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			ELSIF(row > 1400 AND row < 1640 AND column > p_topDigit AND column < p_bottomDigit) THEN
+			ELSIF(column > 1400+ 130  AND column < 1640+ 130  AND row > p_topDigit AND row < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			ELSIF(row > 1660 AND row < 1900 AND column > p_topDigit AND column < p_bottomDigit) THEN
-				red <= (OTHERS => '1');
-				green	<= (OTHERS => '1');
-				blue <= (OTHERS => '1');
-			ELSE
-				red <= (OTHERS => '0');
-				green	<= (OTHERS => '0');
-				blue <= (OTHERS => '0');
+			-- ELSIF(column > 1660 AND column < 1900 AND row > p_topDigit AND row < p_bottomDigit) THEN
+			-- 	red <= (OTHERS => '1');
+			-- 	green	<= (OTHERS => '1');
+			-- 	blue <= (OTHERS => '1');
 			END IF;
 
-			for i in 0 to 6 loop
+			for i in 0 to 5 loop
 				if (i >= 4) then
 					extra := 2;
 				elsif (i >= 2) then
@@ -196,39 +180,39 @@ architecture behavior of hw_image_generator is
 				else
 					extra := 0;
 				end if;
-				digit_pixel_range := seven_segment_display(a(i), b(i), c(i), d(i), e(i), f(i), g(i), 30 + 260*i + 40*extra, 350);
+				digit_pixel_range := seven_segment_display(a(i), b(i), c(i), d(i), e(i), f(i), g(i), 30 + 260*i + 40*extra + 130, 350);
 
-				if (row > digit_pixel_range(0)(0) and row < digit_pixel_range(0)(1) and column > digit_pixel_range(0)(2) and column < digit_pixel_range(0)(3)) then
+				if (column > digit_pixel_range(0)(0) and column < digit_pixel_range(0)(1) and row > digit_pixel_range(0)(2) and row < digit_pixel_range(0)(3)) then
 					red <= (others => '0');
 					green <= (others => '1');
 					blue <= (others => '0');
 				end if;
-				if (row > digit_pixel_range(1)(0) and row < digit_pixel_range(1)(1) and column > digit_pixel_range(1)(2) and column < digit_pixel_range(1)(3)) then
+				if (column > digit_pixel_range(1)(0) and column < digit_pixel_range(1)(1) and row > digit_pixel_range(1)(2) and row < digit_pixel_range(1)(3)) then
 						red <= (others => '0');
 						green <= (others => '1');
 						blue <= (others => '0');
 				end if;
-				if (row > digit_pixel_range(2)(0) and row < digit_pixel_range(2)(1) and column > digit_pixel_range(2)(2) and column < digit_pixel_range(2)(3)) then
+				if (column > digit_pixel_range(2)(0) and column < digit_pixel_range(2)(1) and row > digit_pixel_range(2)(2) and row < digit_pixel_range(2)(3)) then
 					red <= (others => '0');
 					green <= (others => '1');
 					blue <= (others => '0');
 				end if;
-				if (row > digit_pixel_range(3)(0) and row < digit_pixel_range(3)(1) and column > digit_pixel_range(3)(2) and column < digit_pixel_range(3)(3)) then
+				if (column > digit_pixel_range(3)(0) and column < digit_pixel_range(3)(1) and row > digit_pixel_range(3)(2) and row < digit_pixel_range(3)(3)) then
 					red <= (others => '0');
 					green <= (others => '1');
 					blue <= (others => '0');
 				end if;
-				if (row > digit_pixel_range(4)(0) and row < digit_pixel_range(4)(1) and column > digit_pixel_range(4)(2) and column < digit_pixel_range(4)(3)) then
+				if (column > digit_pixel_range(4)(0) and column < digit_pixel_range(4)(1) and row > digit_pixel_range(4)(2) and row < digit_pixel_range(4)(3)) then
 					red <= (others => '0');
 					green <= (others => '1');
 					blue <= (others => '0');
 				end if;
-				if (row > digit_pixel_range(5)(0) and row < digit_pixel_range(5)(1) and column > digit_pixel_range(5)(2) and column < digit_pixel_range(5)(3)) then
+				if (column > digit_pixel_range(5)(0) and column < digit_pixel_range(5)(1) and row > digit_pixel_range(5)(2) and row < digit_pixel_range(5)(3)) then
 					red <= (others => '0');
 					green <= (others => '1');
 					blue <= (others => '0');
 				end if;
-				if (row > digit_pixel_range(6)(0) and row < digit_pixel_range(6)(1) and column > digit_pixel_range(6)(2) and column < digit_pixel_range(6)(3)) then
+				if (column > digit_pixel_range(6)(0) and column < digit_pixel_range(6)(1) and row > digit_pixel_range(6)(2) and row < digit_pixel_range(6)(3)) then
 					red <= (others => '0');
 					green <= (others => '1');
 					blue <= (others => '0');
@@ -236,14 +220,10 @@ architecture behavior of hw_image_generator is
 			end loop;
 		end if;
 	end process;
-
-	get_time: TimerCounter port map (CLK_50MHz, msec_digits, sec_digits, min_digits);
-
-	get_segment_min_1 : led_segment port map(min_digits(7), min_digits(6), min_digits(5), min_digits(4),a(0), b(0), c(0), d(0), e(0), f(0), g(0)); --2
-	get_segment_min_2 : led_segment port map(min_digits(3), min_digits(2), min_digits(1), min_digits(0),a(1), b(1), c(1), d(1), e(1), f(1), g(1)); --5
-	get_segment_sec_1 : led_segment port map(sec_digits(7), sec_digits(6), sec_digits(5), sec_digits(4),a(2), b(2), c(2), d(2), e(2), f(2), g(2)); --3
-	get_segment_sec_2 : led_segment port map(sec_digits(3), sec_digits(2), sec_digits(1), sec_digits(0),a(3), b(3), c(3), d(3), e(3), f(3), g(3)); --6
-	get_segment_msec_1 : led_segment port map(msec_digits(11), msec_digits(10), msec_digits(9), msec_digits(8),a(4), b(4), c(4), d(4), e(4), f(4), g(4)); --9
-	get_segment_msec_2 : led_segment port map(msec_digits(7), msec_digits(6), msec_digits(5), msec_digits(4),a(5), b(5), c(5), d(5), e(5), f(5), g(5)); --0
-	get_segment_msec_3 : led_segment port map(msec_digits(3), msec_digits(2), msec_digits(1), msec_digits(0),a(6), b(6), c(6), d(6), e(6), f(6), g(6)); --7
+	-- get_segment_min_1 : led_segment port map('0','0','1','0',a(0), b(0), c(0), d(0), e(0), f(0), g(0)); --2
+	-- get_segment_min_2 : led_segment port map('0','1','0','1',a(1), b(1), c(1), d(1), e(1), f(1), g(1)); --5
+	-- get_segment_sec_1 : led_segment port map('0','0','1','1',a(2), b(2), c(2), d(2), e(2), f(2), g(2)); --3
+	-- get_segment_sec_2 : led_segment port map('0','1','1','0',a(3), b(3), c(3), d(3), e(3), f(3), g(3)); --6
+	-- get_segment_msec_1 : led_segment port map('1','0','0','1',a(4), b(4), c(4), d(4), e(4), f(4), g(4)); --9
+	-- get_segment_msec_2 : led_segment port map('0','1','1','1',a(5), b(5), c(5), d(5), e(5), f(5), g(5)); --7
 end behavior;

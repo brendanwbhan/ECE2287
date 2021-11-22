@@ -110,6 +110,14 @@
 				{
 					"name" : "clk",
 					"strict" : false
+				},
+				{
+					"name" : "stop_button",
+					"strict" : false
+				},
+				{
+					"name" : "start_button",
+					"strict" : false
 				}
 			]
 		}
