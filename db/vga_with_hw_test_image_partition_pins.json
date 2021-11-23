@@ -112,6 +112,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "resetn",
+					"strict" : false
+				},
+				{
 					"name" : "stop_button",
 					"strict" : false
 				},

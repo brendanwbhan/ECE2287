@@ -9,6 +9,7 @@ entity TimerCounter is
 	port(
 		clk : in std_logic; --50MHz
 		resetn : in std_logic;
+		switch : in std_logic; -- switching between stopwatch and timer
 		clk_is_running : in std_logic;
 		msec_digits : out std_logic_vector (7 downto 0);
 		sec_digits : out std_logic_vector (7 downto 0);
@@ -48,41 +49,44 @@ architecture Behavior of TimerCounter is
 begin  -- Behavior
 	Prescaler: process (clk)
 	begin
---		if clk'event and clk = '1' and resetn = '1' then
---			counter <= (others => '0');
---			counter_msec <= (others => '0');
---			counter_sec <= (others => '0');
---			counter_min <= (others => '0');
---		end if;
-		--50 MHz means one period is 20ns
-		if clk'event and clk = '1' and clk_is_running = '1' then
-			if counter < "1111010000100100000" then --500000
-				counter <= counter + 1;
-			else
+		if clk'event and clk = '1' then
+			if (resetn = '1') then
 				counter <= (others => '0');
-				counter_msec <= counter_msec + 1;
-				--report "msec: " & integer'image(to_integer(unsigned(counter_msec))) & " sec: " &integer'image(to_integer(unsigned(counter_sec))) & " min: " & integer'image(to_integer(unsigned(counter_min)));
-			end if;
-			if counter_msec >= "1100100" then --100
 				counter_msec <= (others => '0');
-				counter_sec <= counter_sec + 1;
-			end if;
-			if counter_sec >= "111100" then --60
 				counter_sec <= (others => '0');
-				counter_min <= counter_min + 1;
-			end if;
-			if counter_min >= "111100" then --60
 				counter_min <= (others => '0');
+			end if;
+		--50 MHz means one period is 20ns
+		
+			if clk_is_running = '1' then
+				if counter < "1111010000100100000" then --500000
+					counter <= counter + 1;
+				else
+					counter <= (others => '0');
+					counter_msec <= counter_msec + 1;
+					--report "msec: " & integer'image(to_integer(unsigned(counter_msec))) & " sec: " &integer'image(to_integer(unsigned(counter_sec))) & " min: " & integer'image(to_integer(unsigned(counter_min)));
+				end if;
+				if counter_msec >= "1100100" then --100
+					counter_msec <= (others => '0');
+					counter_sec <= counter_sec + 1;
+				end if;
+				if counter_sec >= "111100" then --60
+					counter_sec <= (others => '0');
+					counter_min <= counter_min + 1;
+				end if;
+				if counter_min >= "111100" then --60
+					counter_min <= (others => '0');
+				end if;
 			end if;
 		end if;
 
 	end process Prescaler;
 
-		msec_data: NumToDigit port map(counter_msec, msec_1st_dig, msec_2nd_dig);
-    sec_data: NumToDigit port map('0' & counter_sec, sec_1st_dig, sec_2nd_dig);
-    min_data: NumToDigit port map('0' & counter_min, min_1st_dig, min_2nd_dig);
+	msec_data: NumToDigit port map(counter_msec, msec_1st_dig, msec_2nd_dig);
+   sec_data: NumToDigit port map('0' & counter_sec, sec_1st_dig, sec_2nd_dig);
+   min_data: NumToDigit port map('0' & counter_min, min_1st_dig, min_2nd_dig);
 
-    msec_digits <= msec_1st_dig & msec_2nd_dig;
-    sec_digits <= sec_1st_dig & sec_2nd_dig;
-    min_digits <= min_1st_dig & min_2nd_dig;
+   msec_digits <= msec_1st_dig & msec_2nd_dig;
+   sec_digits <= sec_1st_dig & sec_2nd_dig;
+	min_digits <= min_1st_dig & min_2nd_dig;
 end Behavior;

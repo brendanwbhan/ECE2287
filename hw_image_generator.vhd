@@ -36,7 +36,6 @@ entity hw_image_generator is
 		column	:	in		integer;		--column pixel coordinate
 		row		:	in		integer;		--row pixel coordinate
 		a, b, c, d, e, f, g: std_logic_vector(0 to 5);
-
 		red		:	out	std_logic_vector(7 downto 0) := (others => '0');  --red magnitude output to DAC
 		green		:	out	std_logic_vector(7 downto 0) := (others => '0');  --green magnitude output to DAC
 		blue		:	out	std_logic_vector(7 downto 0) := (others => '0')); --blue magnitude output to DAC
@@ -152,17 +151,17 @@ architecture behavior of hw_image_generator is
 				blue <= (OTHERS => '1');
 
 			-- Display dot
-			ELSIF(column > 1100+ 130  AND column < 1120+ 130  AND row > (p_bottomDigit - 20) AND row < p_bottomDigit) THEN
+			ELSIF(column > 1100 + 130  AND column < 1120 + 130  AND row > (p_bottomDigit - 20) AND row < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
 
 			-- Display milliseconds
-			ELSIF(column > 1140+ 130  AND column < 1380+ 130  AND row > p_topDigit AND row < p_bottomDigit) THEN
+			ELSIF(column > 1140 + 130  AND column < 1380 + 130  AND row > p_topDigit AND row < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			ELSIF(column > 1400+ 130  AND column < 1640+ 130  AND row > p_topDigit AND row < p_bottomDigit) THEN
+			ELSIF(column > 1400+ 130  AND column < 1640 + 130  AND row > p_topDigit AND row < p_bottomDigit) THEN
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');

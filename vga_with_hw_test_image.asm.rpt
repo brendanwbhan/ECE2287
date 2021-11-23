@@ -1,5 +1,5 @@
 Assembler report for vga_with_hw_test_image
-Mon Nov 22 17:13:16 2021
+Mon Nov 22 20:31:56 2021
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/vga_with_hw_test_image.sof
+  5. Assembler Device Options: M:/ECE287-main/ECE287-main/vga_with_hw_test_image.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Nov 22 17:13:16 2021 ;
+; Assembler Status      ; Successful - Mon Nov 22 20:31:56 2021 ;
 ; Revision Name         ; vga_with_hw_test_image                ;
 ; Top-level Entity Name ; vga_with_hw_test_image                ;
 ; Family                ; Cyclone IV E                          ;
@@ -53,24 +53,24 @@ agreement for further details.
 +--------+---------+---------------+
 
 
-+---------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                   ;
-+---------------------------------------------------------------------------------------------+
-; File Name                                                                                   ;
-+---------------------------------------------------------------------------------------------+
-; E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/vga_with_hw_test_image.sof ;
-+---------------------------------------------------------------------------------------------+
++-------------------------------------------------------+
+; Assembler Generated Files                             ;
++-------------------------------------------------------+
+; File Name                                             ;
++-------------------------------------------------------+
+; M:/ECE287-main/ECE287-main/vga_with_hw_test_image.sof ;
++-------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: E:/Miami University/Semester/Fall 2021/ECE 287/Stopwatch_display/vga_with_hw_test_image.sof ;
-+----------------+------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                              ;
-+----------------+------------------------------------------------------------------------------------------------------+
-; Device         ; EP4CE115F29C7                                                                                        ;
-; JTAG usercode  ; 0xFFFFFFFF                                                                                           ;
-; Checksum       ; 0x00608B80                                                                                           ;
-+----------------+------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Assembler Device Options: M:/ECE287-main/ECE287-main/vga_with_hw_test_image.sof ;
++----------------+----------------------------------------------------------------+
+; Option         ; Setting                                                        ;
++----------------+----------------------------------------------------------------+
+; Device         ; EP4CE115F29C7                                                  ;
+; JTAG usercode  ; 0xFFFFFFFF                                                     ;
+; Checksum       ; 0x0060D2EF                                                     ;
++----------------+----------------------------------------------------------------+
 
 
 +--------------------+
@@ -79,15 +79,15 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Mon Nov 22 17:13:13 2021
+    Info: Processing started: Mon Nov 22 20:31:52 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off vga_with_hw_test_image -c vga_with_hw_test_image
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4682 megabytes
-    Info: Processing ended: Mon Nov 22 17:13:16 2021
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4702 megabytes
+    Info: Processing ended: Mon Nov 22 20:31:56 2021
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

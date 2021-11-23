@@ -25,7 +25,6 @@ architecture Behavior of TimeSignalGenerator is
       port (sw0, sw1, sw2, sw3: IN STD_LOGIC;
         a, b, c, d, e, f, g: OUT STD_LOGIC);
   end component;
-
   signal msec_digits : std_logic_vector (7 downto 0);
   signal sec_digits : std_logic_vector (7 downto 0);
   signal min_digits : std_logic_vector (7 downto 0);
