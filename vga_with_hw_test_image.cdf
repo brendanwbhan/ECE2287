@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE115F29) Path("M:/ECE287-main/ECE287-main/") File("vga_with_hw_test_image.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE115F29) Path("E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/") File("vga_with_hw_test_image.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -1,5 +1,5 @@
 EDA Netlist Writer report for vga_with_hw_test_image
-Mon Nov 22 20:32:08 2021
+Mon Nov 29 16:21:03 2021
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Nov 22 20:32:08 2021 ;
+; EDA Netlist Writer Status ; Successful - Mon Nov 29 16:21:03 2021 ;
 ; Revision Name             ; vga_with_hw_test_image                ;
 ; Top-level Entity Name     ; vga_with_hw_test_image                ;
 ; Family                    ; Cyclone IV E                          ;
@@ -67,20 +67,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                       ;
-+--------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                  ;
-+--------------------------------------------------------------------------------------------------+
-; M:/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image_7_1200mv_85c_slow.vho      ;
-; M:/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image_7_1200mv_0c_slow.vho       ;
-; M:/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image_min_1200mv_0c_fast.vho     ;
-; M:/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image.vho                        ;
-; M:/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image_7_1200mv_85c_vhd_slow.sdo  ;
-; M:/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image_7_1200mv_0c_vhd_slow.sdo   ;
-; M:/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image_min_1200mv_0c_vhd_fast.sdo ;
-; M:/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image_vhd.sdo                    ;
-+--------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                                   ;
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                              ;
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image_7_1200mv_85c_slow.vho      ;
+; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image_7_1200mv_0c_slow.vho       ;
+; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image_min_1200mv_0c_fast.vho     ;
+; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image.vho                        ;
+; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image_7_1200mv_85c_vhd_slow.sdo  ;
+; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image_7_1200mv_0c_vhd_slow.sdo   ;
+; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image_min_1200mv_0c_vhd_fast.sdo ;
+; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/vga_with_hw_test_image_vhd.sdo                    ;
++----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -89,21 +89,21 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Mon Nov 22 20:32:04 2021
+    Info: Processing started: Mon Nov 29 16:21:01 2021
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off vga_with_hw_test_image -c vga_with_hw_test_image
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file vga_with_hw_test_image_7_1200mv_85c_slow.vho in folder "M:/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file vga_with_hw_test_image_7_1200mv_0c_slow.vho in folder "M:/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file vga_with_hw_test_image_min_1200mv_0c_fast.vho in folder "M:/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file vga_with_hw_test_image.vho in folder "M:/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file vga_with_hw_test_image_7_1200mv_85c_vhd_slow.sdo in folder "M:/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file vga_with_hw_test_image_7_1200mv_0c_vhd_slow.sdo in folder "M:/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file vga_with_hw_test_image_min_1200mv_0c_vhd_fast.sdo in folder "M:/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file vga_with_hw_test_image_vhd.sdo in folder "M:/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file vga_with_hw_test_image_7_1200mv_85c_slow.vho in folder "E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file vga_with_hw_test_image_7_1200mv_0c_slow.vho in folder "E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file vga_with_hw_test_image_min_1200mv_0c_fast.vho in folder "E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file vga_with_hw_test_image.vho in folder "E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file vga_with_hw_test_image_7_1200mv_85c_vhd_slow.sdo in folder "E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file vga_with_hw_test_image_7_1200mv_0c_vhd_slow.sdo in folder "E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file vga_with_hw_test_image_min_1200mv_0c_vhd_fast.sdo in folder "E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file vga_with_hw_test_image_vhd.sdo in folder "E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4688 megabytes
-    Info: Processing ended: Mon Nov 22 20:32:08 2021
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 4668 megabytes
+    Info: Processing ended: Mon Nov 29 16:21:03 2021
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

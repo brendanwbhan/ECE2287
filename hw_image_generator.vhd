@@ -128,9 +128,9 @@ architecture behavior of hw_image_generator is
 		-- Create boxes containing the time number
 		IF(disp_ena = '1') THEN	--display time
 
-			
-				
-				
+
+
+
 			-- Display Minutes
 			IF(column > 20 + 130 AND column < 260 + 130 AND row > p_topDigit AND row < p_bottomDigit) THEN --top dot
 				red <= (OTHERS => '1');
@@ -181,45 +181,46 @@ architecture behavior of hw_image_generator is
 			-- 	green	<= (OTHERS => '1');
 			-- 	blue <= (OTHERS => '1');
 			END IF;
-			
+
 			-------------------------------------------------------------------------------------------
-			
+			--Draw the graphic "STOPWATCH"
+
 			for i in 0 to 11 loop
 				digit_pixel_range := seven_segment_display(a1(i), b1(i), c1(i), d1(i), e1(i), f1(i), g1(i), 400 + 95*i, 50, 50,70);
 
 				if (column > digit_pixel_range(0)(0) and column < digit_pixel_range(0)(1) and row > digit_pixel_range(0)(2) and row < digit_pixel_range(0)(3)) then
-					red <= (others => '0');
-					green <= (others => '1');
+					red <= "11111111";
+					green <= "10100101";
 					blue <= (others => '0');
 				end if;
 				if (column > digit_pixel_range(1)(0) and column < digit_pixel_range(1)(1) and row > digit_pixel_range(1)(2) and row < digit_pixel_range(1)(3)) then
-						red <= (others => '0');
-						green <= (others => '1');
-						blue <= (others => '0');
+					red <= "11111111";
+					green <= "10100101";
+					blue <= (others => '0');
 				end if;
 				if (column > digit_pixel_range(2)(0) and column < digit_pixel_range(2)(1) and row > digit_pixel_range(2)(2) and row < digit_pixel_range(2)(3)) then
-					red <= (others => '0');
-					green <= (others => '1');
+					red <= "11111111";
+					green <= "10100101";
 					blue <= (others => '0');
 				end if;
 				if (column > digit_pixel_range(3)(0) and column < digit_pixel_range(3)(1) and row > digit_pixel_range(3)(2) and row < digit_pixel_range(3)(3)) then
-					red <= (others => '0');
-					green <= (others => '1');
+					red <= "11111111";
+					green <= "10100101";
 					blue <= (others => '0');
 				end if;
 				if (column > digit_pixel_range(4)(0) and column < digit_pixel_range(4)(1) and row > digit_pixel_range(4)(2) and row < digit_pixel_range(4)(3)) then
-					red <= (others => '0');
-					green <= (others => '1');
+					red <= "11111111";
+					green <= "10100101";
 					blue <= (others => '0');
 				end if;
 				if (column > digit_pixel_range(5)(0) and column < digit_pixel_range(5)(1) and row > digit_pixel_range(5)(2) and row < digit_pixel_range(5)(3)) then
-					red <= (others => '0');
-					green <= (others => '1');
+					red <= "11111111";
+					green <= "10100101";
 					blue <= (others => '0');
 				end if;
 				if (column > digit_pixel_range(6)(0) and column < digit_pixel_range(6)(1) and row > digit_pixel_range(6)(2) and row < digit_pixel_range(6)(3)) then
-					red <= (others => '0');
-					green <= (others => '1');
+					red <= "11111111";
+					green <= "10100101";
 					blue <= (others => '0');
 				end if;
 			end loop;
@@ -273,10 +274,4 @@ architecture behavior of hw_image_generator is
 			end loop;
 		end if;
 	end process;
-	-- get_segment_min_1 : led_segment port map('0','0','1','0',a(0), b(0), c(0), d(0), e(0), f(0), g(0)); --2
-	-- get_segment_min_2 : led_segment port map('0','1','0','1',a(1), b(1), c(1), d(1), e(1), f(1), g(1)); --5
-	-- get_segment_sec_1 : led_segment port map('0','0','1','1',a(2), b(2), c(2), d(2), e(2), f(2), g(2)); --3
-	-- get_segment_sec_2 : led_segment port map('0','1','1','0',a(3), b(3), c(3), d(3), e(3), f(3), g(3)); --6
-	-- get_segment_msec_1 : led_segment port map('1','0','0','1',a(4), b(4), c(4), d(4), e(4), f(4), g(4)); --9
-	-- get_segment_msec_2 : led_segment port map('0','1','1','1',a(5), b(5), c(5), d(5), e(5), f(5), g(5)); --7
 end behavior;
