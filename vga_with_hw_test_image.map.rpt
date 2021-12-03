@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga_with_hw_test_image
-Mon Nov 29 16:20:40 2021
+Tue Nov 30 13:10:30 2021
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 29 16:20:40 2021       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 30 13:10:30 2021       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; vga_with_hw_test_image                      ;
 ; Top-level Entity Name              ; vga_with_hw_test_image                      ;
@@ -185,38 +185,38 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                      ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
-; ButtonControl.vhd                ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/ButtonControl.vhd          ;         ;
-; TimeSignalGenerator.vhd          ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/TimeSignalGenerator.vhd    ;         ;
-; TimeCounter.vhd                  ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/TimeCounter.vhd            ;         ;
-; NumToDigit.vhd                   ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd             ;         ;
-; led_segment.vhd                  ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/led_segment.vhd            ;         ;
-; vga_with_hw_test_image.bdf       ; yes             ; User Block Diagram/Schematic File  ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/vga_with_hw_test_image.bdf ;         ;
-; vga_controller.vhd               ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/vga_controller.vhd         ;         ;
-; hw_image_generator.vhd           ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/hw_image_generator.vhd     ;         ;
-; altpll0.vhd                      ; yes             ; User Wizard-Generated File         ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/altpll0.vhd                ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/altpll.tdf                   ;         ;
-; aglobal161.inc                   ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/aglobal161.inc               ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/stratix_pll.inc              ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/stratixii_pll.inc            ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/cycloneii_pll.inc            ;         ;
-; db/altpll0_altpll.v              ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/altpll0_altpll.v        ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/lpm_divide.tdf               ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/abs_divider.inc              ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/sign_div_unsign.inc          ;         ;
-; db/lpm_divide_o9m.tdf            ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/lpm_divide_o9m.tdf      ;         ;
-; db/sign_div_unsign_dkh.tdf       ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/sign_div_unsign_dkh.tdf ;         ;
-; db/alt_u_div_e4f.tdf             ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/alt_u_div_e4f.tdf       ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/add_sub_7pc.tdf         ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/add_sub_8pc.tdf         ;         ;
-; db/lpm_divide_ihm.tdf            ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/lpm_divide_ihm.tdf      ;         ;
-; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/sign_div_unsign_akh.tdf ;         ;
-; db/alt_u_div_84f.tdf             ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/alt_u_div_84f.tdf       ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
+; ButtonControl.vhd                ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/ButtonControl.vhd                  ;         ;
+; TimeSignalGenerator.vhd          ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/TimeSignalGenerator.vhd            ;         ;
+; TimeCounter.vhd                  ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/TimeCounter.vhd                    ;         ;
+; NumToDigit.vhd                   ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd                     ;         ;
+; led_segment.vhd                  ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/led_segment.vhd                    ;         ;
+; vga_with_hw_test_image.bdf       ; yes             ; User Block Diagram/Schematic File  ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/vga_with_hw_test_image.bdf         ;         ;
+; vga_controller.vhd               ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/vga_controller.vhd                 ;         ;
+; hw_image_generator.vhd           ; yes             ; User VHDL File                     ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/hw_image_generator.vhd             ;         ;
+; altpll0.vhd                      ; yes             ; User Wizard-Generated File         ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/altpll0.vhd                        ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/altpll.tdf          ;         ;
+; aglobal161.inc                   ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/aglobal161.inc      ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/stratix_pll.inc     ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/stratixii_pll.inc   ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/cycloneii_pll.inc   ;         ;
+; db/altpll0_altpll.v              ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/altpll0_altpll.v                ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                       ; d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; db/lpm_divide_o9m.tdf            ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/lpm_divide_o9m.tdf              ;         ;
+; db/sign_div_unsign_dkh.tdf       ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/sign_div_unsign_dkh.tdf         ;         ;
+; db/alt_u_div_e4f.tdf             ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/alt_u_div_e4f.tdf               ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/add_sub_7pc.tdf                 ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/add_sub_8pc.tdf                 ;         ;
+; db/lpm_divide_ihm.tdf            ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/lpm_divide_ihm.tdf              ;         ;
+; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/sign_div_unsign_akh.tdf         ;         ;
+; db/alt_u_div_84f.tdf             ; yes             ; Auto-Generated Megafunction        ; E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/alt_u_div_84f.tdf               ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------+
@@ -1063,7 +1063,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:11     ;
+; Top            ; 00:00:13     ;
 +----------------+--------------+
 
 
@@ -1073,47 +1073,47 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Mon Nov 29 16:20:19 2021
+    Info: Processing started: Tue Nov 30 13:10:01 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga_with_hw_test_image -c vga_with_hw_test_image
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 4 design units, including 2 entities, in source file buttoncontrol.vhd
-    Info (12022): Found design unit 1: flipflop-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/ButtonControl.vhd Line: 12
-    Info (12022): Found design unit 2: ButtonControl-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/ButtonControl.vhd Line: 33
-    Info (12023): Found entity 1: flipflop File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/ButtonControl.vhd Line: 6
-    Info (12023): Found entity 2: ButtonControl File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/ButtonControl.vhd Line: 27
+    Info (12022): Found design unit 1: flipflop-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/ButtonControl.vhd Line: 12
+    Info (12022): Found design unit 2: ButtonControl-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/ButtonControl.vhd Line: 33
+    Info (12023): Found entity 1: flipflop File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/ButtonControl.vhd Line: 6
+    Info (12023): Found entity 2: ButtonControl File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/ButtonControl.vhd Line: 27
 Info (12021): Found 2 design units, including 1 entities, in source file timesignalgenerator.vhd
-    Info (12022): Found design unit 1: TimeSignalGenerator-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/TimeSignalGenerator.vhd Line: 13
-    Info (12023): Found entity 1: TimeSignalGenerator File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/TimeSignalGenerator.vhd Line: 5
+    Info (12022): Found design unit 1: TimeSignalGenerator-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/TimeSignalGenerator.vhd Line: 13
+    Info (12023): Found entity 1: TimeSignalGenerator File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/TimeSignalGenerator.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file timecounter.vhd
-    Info (12022): Found design unit 1: TimerCounter-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/TimeCounter.vhd Line: 19
-    Info (12023): Found entity 1: TimerCounter File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/TimeCounter.vhd Line: 8
+    Info (12022): Found design unit 1: TimerCounter-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/TimeCounter.vhd Line: 19
+    Info (12023): Found entity 1: TimerCounter File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/TimeCounter.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file numtodigit.vhd
-    Info (12022): Found design unit 1: NumToDigit-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 18
-    Info (12023): Found entity 1: NumToDigit File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 6
+    Info (12022): Found design unit 1: NumToDigit-Behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 18
+    Info (12023): Found entity 1: NumToDigit File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file led_segment.vhd
-    Info (12022): Found design unit 1: led_segment-LogicFunc File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/led_segment.vhd Line: 8
-    Info (12023): Found entity 1: led_segment File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/led_segment.vhd Line: 4
+    Info (12022): Found design unit 1: led_segment-LogicFunc File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/led_segment.vhd Line: 8
+    Info (12023): Found entity 1: led_segment File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/led_segment.vhd Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file vga_with_hw_test_image.bdf
     Info (12023): Found entity 1: vga_with_hw_test_image
 Info (12021): Found 2 design units, including 1 entities, in source file vga_controller.vhd
-    Info (12022): Found design unit 1: vga_controller-behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/vga_controller.vhd Line: 53
-    Info (12023): Found entity 1: vga_controller File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/vga_controller.vhd Line: 28
+    Info (12022): Found design unit 1: vga_controller-behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/vga_controller.vhd Line: 53
+    Info (12023): Found entity 1: vga_controller File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/vga_controller.vhd Line: 28
 Info (12021): Found 2 design units, including 1 entities, in source file hw_image_generator.vhd
-    Info (12022): Found design unit 1: hw_image_generator-behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/hw_image_generator.vhd Line: 45
-    Info (12023): Found entity 1: hw_image_generator File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/hw_image_generator.vhd Line: 27
+    Info (12022): Found design unit 1: hw_image_generator-behavior File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/hw_image_generator.vhd Line: 45
+    Info (12023): Found entity 1: hw_image_generator File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/hw_image_generator.vhd Line: 27
 Info (12021): Found 2 design units, including 1 entities, in source file vga_pll.vhd
-    Info (12022): Found design unit 1: vga_pll-SYN File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/vga_pll.vhd Line: 52
-    Info (12023): Found entity 1: vga_pll File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/vga_pll.vhd Line: 42
+    Info (12022): Found design unit 1: vga_pll-SYN File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/vga_pll.vhd Line: 52
+    Info (12023): Found entity 1: vga_pll File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/vga_pll.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file altpll0.vhd
-    Info (12022): Found design unit 1: altpll0-SYN File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/altpll0.vhd Line: 52
-    Info (12023): Found entity 1: altpll0 File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/altpll0.vhd Line: 42
+    Info (12022): Found design unit 1: altpll0-SYN File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/altpll0.vhd Line: 52
+    Info (12023): Found entity 1: altpll0 File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/altpll0.vhd Line: 42
 Info (12127): Elaborating entity "vga_with_hw_test_image" for the top level hierarchy
 Warning (275011): Block or symbol "hw_image_generator" of instance "inst" overlaps another block or symbol
 Info (12128): Elaborating entity "altpll0" for hierarchy "altpll0:inst2"
-Info (12128): Elaborating entity "altpll" for hierarchy "altpll0:inst2|altpll:altpll_component" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/altpll0.vhd Line: 135
-Info (12130): Elaborated megafunction instantiation "altpll0:inst2|altpll:altpll_component" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/altpll0.vhd Line: 135
-Info (12133): Instantiated megafunction "altpll0:inst2|altpll:altpll_component" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/altpll0.vhd Line: 135
+Info (12128): Elaborating entity "altpll" for hierarchy "altpll0:inst2|altpll:altpll_component" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/altpll0.vhd Line: 135
+Info (12130): Elaborated megafunction instantiation "altpll0:inst2|altpll:altpll_component" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/altpll0.vhd Line: 135
+Info (12133): Instantiated megafunction "altpll0:inst2|altpll:altpll_component" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/altpll0.vhd Line: 135
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "1250"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1169,71 +1169,71 @@ Info (12133): Instantiated megafunction "altpll0:inst2|altpll:altpll_component" 
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altpll0_altpll.v
-    Info (12023): Found entity 1: altpll0_altpll File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/altpll0_altpll.v Line: 30
+    Info (12023): Found entity 1: altpll0_altpll File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/altpll0_altpll.v Line: 30
 Info (12128): Elaborating entity "altpll0_altpll" for hierarchy "altpll0:inst2|altpll:altpll_component|altpll0_altpll:auto_generated" File: d:/program-files/intel/fpga_pro/16.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:inst1"
-Warning (10541): VHDL Signal Declaration warning at vga_controller.vhd(50): used implicit default value for signal "clk" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/vga_controller.vhd Line: 50
+Warning (10541): VHDL Signal Declaration warning at vga_controller.vhd(50): used implicit default value for signal "clk" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/vga_controller.vhd Line: 50
 Info (12128): Elaborating entity "hw_image_generator" for hierarchy "hw_image_generator:inst"
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(55): used initial value expression for variable "a1" because variable was never assigned a value File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/hw_image_generator.vhd Line: 55
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(56): used initial value expression for variable "b1" because variable was never assigned a value File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/hw_image_generator.vhd Line: 56
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(57): used initial value expression for variable "c1" because variable was never assigned a value File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/hw_image_generator.vhd Line: 57
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(58): used initial value expression for variable "d1" because variable was never assigned a value File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/hw_image_generator.vhd Line: 58
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(59): used initial value expression for variable "e1" because variable was never assigned a value File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/hw_image_generator.vhd Line: 59
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(60): used initial value expression for variable "f1" because variable was never assigned a value File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/hw_image_generator.vhd Line: 60
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(61): used initial value expression for variable "g1" because variable was never assigned a value File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/hw_image_generator.vhd Line: 61
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(55): used initial value expression for variable "a1" because variable was never assigned a value File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/hw_image_generator.vhd Line: 55
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(56): used initial value expression for variable "b1" because variable was never assigned a value File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/hw_image_generator.vhd Line: 56
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(57): used initial value expression for variable "c1" because variable was never assigned a value File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/hw_image_generator.vhd Line: 57
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(58): used initial value expression for variable "d1" because variable was never assigned a value File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/hw_image_generator.vhd Line: 58
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(59): used initial value expression for variable "e1" because variable was never assigned a value File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/hw_image_generator.vhd Line: 59
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(60): used initial value expression for variable "f1" because variable was never assigned a value File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/hw_image_generator.vhd Line: 60
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(61): used initial value expression for variable "g1" because variable was never assigned a value File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/hw_image_generator.vhd Line: 61
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "digit_pixel_range" into its bus
 Info (12128): Elaborating entity "TimeSignalGenerator" for hierarchy "TimeSignalGenerator:inst8"
-Info (12128): Elaborating entity "TimerCounter" for hierarchy "TimeSignalGenerator:inst8|TimerCounter:get_time" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/TimeSignalGenerator.vhd Line: 33
-Info (12128): Elaborating entity "NumToDigit" for hierarchy "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/TimeCounter.vhd Line: 85
-Info (12128): Elaborating entity "led_segment" for hierarchy "TimeSignalGenerator:inst8|led_segment:get_segment_min_1" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/TimeSignalGenerator.vhd Line: 35
+Info (12128): Elaborating entity "TimerCounter" for hierarchy "TimeSignalGenerator:inst8|TimerCounter:get_time" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/TimeSignalGenerator.vhd Line: 33
+Info (12128): Elaborating entity "NumToDigit" for hierarchy "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/TimeCounter.vhd Line: 85
+Info (12128): Elaborating entity "led_segment" for hierarchy "TimeSignalGenerator:inst8|led_segment:get_segment_min_1" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/TimeSignalGenerator.vhd Line: 35
 Info (12128): Elaborating entity "ButtonControl" for hierarchy "ButtonControl:inst6"
-Info (12128): Elaborating entity "flipflop" for hierarchy "ButtonControl:inst6|flipflop:flipflop_mapping" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/ButtonControl.vhd Line: 44
+Info (12128): Elaborating entity "flipflop" for hierarchy "ButtonControl:inst6|flipflop:flipflop_mapping" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/ButtonControl.vhd Line: 44
 Info (278001): Inferred 9 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 27
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 27
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 28
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|Mod1" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 28
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 28
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|Mod1" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 28
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 27
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 28
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|Mod1" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 28
-Info (12130): Elaborated megafunction instantiation "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 27
-Info (12133): Instantiated megafunction "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 27
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 27
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 27
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 28
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|Mod1" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 28
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 28
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|Mod1" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 28
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 27
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 28
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:min_data|Mod1" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 28
+Info (12130): Elaborated megafunction instantiation "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 27
+Info (12133): Instantiated megafunction "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Mod0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 27
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_o9m.tdf
-    Info (12023): Found entity 1: lpm_divide_o9m File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/lpm_divide_o9m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_o9m File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/lpm_divide_o9m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dkh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_dkh File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/sign_div_unsign_dkh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_dkh File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/sign_div_unsign_dkh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_e4f.tdf
-    Info (12023): Found entity 1: alt_u_div_e4f File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/alt_u_div_e4f.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_e4f File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/alt_u_div_e4f.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/add_sub_7pc.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_7pc File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/add_sub_7pc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/add_sub_8pc.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 27
-Info (12133): Instantiated megafunction "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 27
+    Info (12023): Found entity 1: add_sub_8pc File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 27
+Info (12133): Instantiated megafunction "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 27
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 28
-Info (12133): Instantiated megafunction "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 28
+Info (12130): Elaborated megafunction instantiation "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 28
+Info (12133): Instantiated megafunction "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Div0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 28
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ihm.tdf
-    Info (12023): Found entity 1: lpm_divide_ihm File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/lpm_divide_ihm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_ihm File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/lpm_divide_ihm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_akh File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/sign_div_unsign_akh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_akh File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/sign_div_unsign_akh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_84f.tdf
-    Info (12023): Found entity 1: alt_u_div_84f File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/alt_u_div_84f.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 28
-Info (12133): Instantiated megafunction "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/NumToDigit.vhd Line: 28
+    Info (12023): Found entity 1: alt_u_div_84f File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/alt_u_div_84f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 28
+Info (12133): Instantiated megafunction "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:sec_data|lpm_divide:Div0" with the following parameter: File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/NumToDigit.vhd Line: 28
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1244,7 +1244,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "n_sync" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider|add_sub_6_result_int[0]~14" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287-main/ECE287-main/db/alt_u_div_e4f.tdf Line: 57
+    Info (17048): Logic cell "TimeSignalGenerator:inst8|TimerCounter:get_time|NumToDigit:msec_data|lpm_divide:Mod1|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider|add_sub_6_result_int[0]~14" File: E:/Miami University/Semester/Fall 2021/ECE 287/ECE287/db/alt_u_div_e4f.tdf Line: 57
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 1438 device resources after synthesis - the final resource count might be different
@@ -1253,9 +1253,9 @@ Info (21057): Implemented 1438 device resources after synthesis - the final reso
     Info (21061): Implemented 1404 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Mon Nov 29 16:20:40 2021
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Tue Nov 30 13:10:30 2021
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:33
 
 

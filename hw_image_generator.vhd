@@ -176,10 +176,6 @@ architecture behavior of hw_image_generator is
 				red <= (OTHERS => '1');
 				green	<= (OTHERS => '1');
 				blue <= (OTHERS => '1');
-			-- ELSIF(column > 1660 AND column < 1900 AND row > p_topDigit AND row < p_bottomDigit) THEN
-			-- 	red <= (OTHERS => '1');
-			-- 	green	<= (OTHERS => '1');
-			-- 	blue <= (OTHERS => '1');
 			END IF;
 
 			-------------------------------------------------------------------------------------------
